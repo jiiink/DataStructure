@@ -1,0 +1,28 @@
+1. Environment에서 File Association
+
+2. Syntax Highlight 설정하기
+
+3. Code Formatter 설정하기 - Google Type이 제일 좋음
+
+
+4. 창을 쪼갤 수 있다. 메인화면에서 오른클릭. Split Vertical Window
+
+  행 번호를 표시하는 부분 여백이 너무 넓다(처음에는 6으로 되어있어 
+  무려 몇십만 줄짜리도 표시할 수 있다). 그런데 쓸 일이 없고 화면을 좁히니 
+  취향에 따라 줄이자.
+
+5. Font는 Courier New가 제일 좋다.
+
+6. Syntax Highlighting의 default값이 보기 불편하다. 
+    대표적으로 //를 이용한 주석이 볼드 없는 옅은 나무색으로 하면 좋다. 
+    최신의 code block을 설치하면 Style을 선택할 수 있다.
+    
+7. Abbreviations 기능의 활용: 
+ (Cntl-J를 누르면 pop-up이 뜬다.)
+  보통은 잘 쓰지 않을 수도 있지만, 스피디하게 코딩해야 하는 대회에서 
+  Abbreviations 기능은 매우 유용하다.
+  
+8.  typedef long long ll, using namespace std 등은 매우 자주 쓰이기 때문에 
+    단축해놓는 것이 좋다.
+
+9. 탐색하기. Cntl-F

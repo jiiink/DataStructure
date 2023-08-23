@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599010238 source:d:\___ working\stl 2020 lab 1(e)\stl 1000 - coding basic 1(c)\coding 120- stdin stdout\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

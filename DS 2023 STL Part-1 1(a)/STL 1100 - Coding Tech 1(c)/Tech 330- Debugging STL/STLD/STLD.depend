@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1598062124 source:d:\___ working\stl 2020 lab 1(d)\stl 1100 - coding tech 1(c)\tech 330- debugging stl\stld\main.cpp
+	<iostream>
+	<vector>
+	<list>
+

@@ -1,0 +1,10 @@
+1.최신 Boost를 다운받아 C:\Boost에 설치한다.
+
+2. 해당 디렉토리에 가서 boostrap mingw를 수행한다.
+   또는 > bootstrap g++
+   
+3. CodeBlock "search"에 가서 해당 위치를 포함시킨다.
+   C:\Boost
+   
+   
+2020 집 랩탑에서는 쉽게 수행되었음.   

@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1566869374 source:d:\___ working\stl 2020 lab 1(b)\stl 1000 - coding basic 1(b)\coding 100- project compiling\dproject\func_x.cpp
+	<bits/stdc++.h>
+
+1597043185 source:d:\___ working\stl 2020 lab 1(b)\stl 1000 - coding basic 1(b)\coding 100- project compiling\프로젝트연습\main.cpp
+	<iostream>
+	<stdio.h>
+	<bits/stdc++.h>
+
+1597043313 source:d:\___ working\stl 2020 lab 1(b)\stl 1000 - coding basic 1(b)\coding 100- project compiling\프로젝트연습\func_x.cpp
+	<bits/stdc++.h>
+
+1597043314 source:d:\___ working\stl 2020 lab 1(b)\stl 1000 - coding basic 1(b)\coding 100- project compiling\프로젝트연습\func_y.cpp
+	<bits/stdc++.h>
+
+1597043313 source:d:\___ working\stl 2022 2(o)\stl 1000 - coding basic 1(c)\coding 100- project\프로젝트연습\func_x.cpp
+	<bits/stdc++.h>
+
+1597043314 source:d:\___ working\stl 2022 2(o)\stl 1000 - coding basic 1(c)\coding 100- project\프로젝트연습\func_y.cpp
+	<bits/stdc++.h>
+
+1654581495 source:d:\___ working\stl 2022 2(o)\stl 1000 - coding basic 1(c)\coding 100- project\프로젝트연습\main.cpp
+	<iostream>
+	<stdio.h>
+	<bits/stdc++.h>
+
+1597043314 source:d:\___ working\stl 2022 3(f)\stl 1000 - coding basic 1(c)\coding 210- project의 유용성\프로젝트연습\func_x.cpp
+	<bits/stdc++.h>
+
+1597043316 source:d:\___ working\stl 2022 3(f)\stl 1000 - coding basic 1(c)\coding 210- project의 유용성\프로젝트연습\func_y.cpp
+	<bits/stdc++.h>
+
+1654581496 source:d:\___ working\stl 2022 3(f)\stl 1000 - coding basic 1(c)\coding 210- project의 유용성\프로젝트연습\main.cpp
+	<iostream>
+	<stdio.h>
+	<bits/stdc++.h>
+
