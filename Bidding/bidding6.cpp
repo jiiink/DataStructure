@@ -3,6 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <map>
+#include <algorithm>
 using namespace std;
 
 bool isNotDigit(char c) {
@@ -11,7 +12,7 @@ bool isNotDigit(char c) {
 
 int main() {
     fstream myfile; //file object
-    myfile.open("test3.txt", ios::in); //open file
+    myfile.open("test2.txt", ios::in); //open file
     if (myfile.is_open()) { //check if file is opened
         string line; //var for getline()
         int number; //number of people
@@ -44,6 +45,8 @@ int main() {
             }
         }
         cout << winner << endl; //print the winner
+    } else {
+        cout << "FIle is not found" << endl;
     }
     myfile.close(); //file close
     return 0;

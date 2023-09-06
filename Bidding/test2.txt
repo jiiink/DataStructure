@@ -4,7 +4,7 @@ Mary 67
 Corry 45
 Samdori 89
 Popirov 54
-Greg  23
-Sadori  89
+Greg 23
+Sadori 89
 Witten 67
-Adamo  56
+Adamo 56

@@ -3,6 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <map>
+#include <algorithm>
 using namespace std;
 
 void openFile(fstream& myfile);
@@ -39,7 +40,7 @@ int main() {
 }
 
 void openFile(fstream& myfile) {
-    myfile.open("test.txt", ios::in);
+    myfile.open("DataStructure/Bidding/test.txt", ios::in);
 }
 int getNumber(fstream& myfile) {
     string line;

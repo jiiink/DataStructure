@@ -1,30 +1,60 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <sstream>
+#include <vector>
+#include <map>
+#include <algorithm>
 using namespace std;
 
-int main(void) {
-	fstream myfile;
-	myfile.open("test.txt", ios::in);
+bool isNotDigit(char c) {
+    return !isdigit(c);
+}
 
-	if (myfile.is_open()) {
-		int number;
-		myfile >> number;
+int main() {
+    vector<string> lines;
+    string line;
+    string firstLine;
 
-		cout << number << endl;
+    getline(cin, firstLine);
 
-		string strArr[number];
-		int intArr[number];
+    while (true) {
+        getline(cin, line);
+        if (line.empty()) {
+            break;
+        }
+        lines.push_back(line);
+    }
 
-		for (int i=0; i<number; i++) {
-			myfile >> strArr[i] >> intArr[i];
-		}
+    map<int, vector<string>, greater<int> > bids;
 
-		for (int i=0; i<number; i++) {
-			cout << strArr[i] << " " << intArr[i] << endl;
-		}
-	}
+    for (string& line : lines) {
+        istringstream splitedLine(line);
+        string name;
+        string intStr;
+        int bid;
 
-	myfile.close();
-	return 0;
+        splitedLine >> name;
+        splitedLine >> intStr;
+        
+        intStr.erase(remove_if(intStr.begin(), intStr.end(), isNotDigit), intStr.end());
+        
+        if (!intStr.empty()) {
+            bid = stoi(intStr);
+        } else {
+            bid = 0;
+        }
+        bids[bid].push_back(name);
+    }
+
+    string winner = "NONE";
+
+    for (auto& bid : bids) {
+        if (bid.second.size() == 1) {
+            winner = bid.second[0];
+            break;
+        }
+    }
+
+    cout << winner << endl;
+
+    return 0;
 }
