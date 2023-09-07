@@ -5,6 +5,8 @@
 #include <algorithm>
 using namespace std;
 
+//functional ???
+
 bool isNotDigit(char c) {
     return !isdigit(c);
 }
@@ -26,7 +28,7 @@ int main() {
 
     map<int, vector<string>, greater<int> > bids;
 
-    for (string& line : lines) {
+    for (const string& line : lines) {
         istringstream splitedLine(line);
         string name;
         string intStr;
@@ -47,7 +49,7 @@ int main() {
 
     string winner = "NONE";
 
-    for (auto& bid : bids) {
+    for (const pair<int, vector<string> >& bid : bids) {
         if (bid.second.size() == 1) {
             winner = bid.second[0];
             break;
