@@ -1,0 +1,1 @@
+print *(vi._M_impl._M_start)@1

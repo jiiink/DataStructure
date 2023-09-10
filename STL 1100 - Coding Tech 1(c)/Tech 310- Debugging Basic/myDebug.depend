@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1474528591 source:d:\___ myprog\codeblock\mydebug\main.c
+	<stdio.h>
+
+1536030224 source:d:\___ working\stl 2019 lab 3(f)\stl 0100 - coding basic 1(b)\stl-begin- 600- debugging more\main.c
+	<stdio.h>
+
+1567568570 source:d:\___ working\stl 2019 lab 3(f)\stl 0100 - coding basic 1(b)\stl-begin- 600- debugging basic\main.c
+	<stdio.h>
+
+1567568572 source:d:\___ working\stl 2020 lab 1(b)\stl 1200 - coding tech 1(c)\coding 500- debugging basic\main.c
+	<stdio.h>
+
+1597801121 source:d:\___ working\stl 2020 lab 1(c)\stl 1100 - coding tech 1(c)\tech 310- debugging basic\main.c
+	<stdio.h>
+
+1597801121 source:d:\___ working\stl 2020 lab 1(d)\stl 1100 - coding tech 1(c)\tech 310- debugging basic\main.c
+	<stdio.h>
+
+1597998433 source:d:\___ working\stl 2020 lab 1(d)\stl 1100 - coding tech 1(c)\tech 310- debugging basic\main.cpp
+	<stdio.h>
+	<iostream>
+
+1654671320 source:d:\___ working\stl 2022 2(o)\stl 1100 - coding tech 1(c)\tech 310- debugging basic\main.cpp
+	<stdio.h>
+	<iostream>
+

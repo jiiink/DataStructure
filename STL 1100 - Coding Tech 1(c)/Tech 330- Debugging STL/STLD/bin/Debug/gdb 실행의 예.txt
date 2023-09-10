@@ -1,0 +1,133 @@
+>> gdb main
+
+(gdb) list
+(gdb) list
+(gdb) break 14
+
+(gdb) run  // break까지 수행시켜 봄
+
+(gdb) print vi
+(gdb) n
+,,,,
+..
+(gdn) n
+
+(gdb) print vi
+(gdb) print li
+(gdb) c   // break point까지 수행함.
+
+
+----------------------- console ----------------------
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation. All rights reserved.
+
+D:\___ Working\STL 2020 Lab 1(d)\STL 1100 - Coding Tech 1(c)\Tech 330- Debugging
+ STL\STLD>gdb main
+GNU gdb (GDB) 8.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from main...done.
+(gdb) list
+1       #include <iostream>
+2       #include <vector>
+3       #include <list>
+4
+5       using namespace std;
+6
+7       int main() {
+8
+9           vector<int> vi ;
+10          list <int> li ;
+(gdb) list
+11          cout << " vector  debug  " << endl;
+12          for(int i=0 ; i < 10 ; i++){
+13                  auto sqr = i * i ;
+14                  vi.push_back( sqr ) ;
+15                  li.push_back( sqr ) ;
+16
+17          }
+18
+19          return 0;
+20      }
+(gdb) b 15
+Breakpoint 1 at 0x4015c4: file main.cpp, line 15.
+(gdb) s
+The program is not being run.
+(gdb) r
+Starting program: D:\___ Working\STL 2020 Lab 1(d)\STL 1100 - Coding Tech 1(c)\T
+ech 330- Debugging STL\STLD\main.exe
+[New Thread 11660.0x2d84]
+ vector 자료구조를 debug 모듈에 넣기
+
+Breakpoint 1, main () at main.cpp:15
+15                  li.push_back( sqr ) ;
+(gdb) print vi
+$1 = std::vector of length 1, capacity 1 = {0}
+(gdb) s
+std::__cxx11::list<int, std::allocator<int> >::push_back (this=0x22fe00,
+    __x=@0x22fdfc: 0)
+    at C:/Program Files/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/includ
+e/c++/bits/stl_list.h:1219
+1219          { this->_M_insert(end(), __x); }
+(gdb) print vi
+No symbol "vi" in current context.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) n
+main () at main.cpp:12
+12          for(int i=0 ; i < 10 ; i++){
+(gdb) n
+13                  auto sqr = i * i ;
+(gdb) n
+14                  vi.push_back( sqr ) ;
+(gdb) print vi
+$2 = std::vector of length 1, capacity 1 = {0}
+(gdb) n
+
+Breakpoint 1, main () at main.cpp:15
+15                  li.push_back( sqr ) ;
+(gdb) n
+12          for(int i=0 ; i < 10 ; i++){
+(gdb) n
+13                  auto sqr = i * i ;
+(gdb) n
+14                  vi.push_back( sqr ) ;
+(gdb) n
+
+Breakpoint 1, main () at main.cpp:15
+15                  li.push_back( sqr ) ;
+(gdb) n
+12          for(int i=0 ; i < 10 ; i++){
+(gdb) print vi
+$3 = std::vector of length 3, capacity 4 = {0, 1, 4}
+(gdb) print li
+$4 = std::__cxx11::list = {[0] = 0, [1] = 1, [2] = 4}
+(gdb) c
+Continuing.
+
+Breakpoint 1, main () at main.cpp:15
+15                  li.push_back( sqr ) ;
+(gdb) print vi
+$5 = std::vector of length 4, capacity 4 = {0, 1, 4, 9}
+(gdb) c
+Continuing.
+
+Breakpoint 1, main () at main.cpp:15
+15                  li.push_back( sqr ) ;
+(gdb) print vi
+$6 = std::vector of length 5, capacity 8 = {0, 1, 4, 9, 16}
+(gdb)

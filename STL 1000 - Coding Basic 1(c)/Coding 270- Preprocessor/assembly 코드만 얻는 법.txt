@@ -1,0 +1,3 @@
+assembly code만 얻는 법
+
+> g++ -S a.cpp  -o a.asm

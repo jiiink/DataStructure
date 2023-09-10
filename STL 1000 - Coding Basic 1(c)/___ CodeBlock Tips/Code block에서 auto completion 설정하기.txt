@@ -1,0 +1,7 @@
+20.3 Compiler에서는 작동되지 않는다.
+
+Code:Block 17.2의 g++.exe, gcc.exe에서 동작한다.
+이유는 확실하지 않음
+
+Compiler는 ISO C++14, 2011 C compiler를 선택해야 한다.
+

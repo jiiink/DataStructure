@@ -1,0 +1,4 @@
+Value of X:  30
+Value of Y:  10
+Value of Z:  30
+Value of W:  100

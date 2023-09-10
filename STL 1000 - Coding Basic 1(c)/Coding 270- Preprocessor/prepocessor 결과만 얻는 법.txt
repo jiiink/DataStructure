@@ -1,0 +1,3 @@
+proprocessor 결과만 얻는 법
+
+> g++ -E a.cpp

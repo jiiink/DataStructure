@@ -1,0 +1,4 @@
+
+1) Manager window 열기
+
+2) Debug Mode와 Release Mode 이해하기

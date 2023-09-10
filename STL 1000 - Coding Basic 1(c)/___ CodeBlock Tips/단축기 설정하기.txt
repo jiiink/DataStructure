@@ -1,0 +1,11 @@
+
+
+Abbreviations 기능의 활용: 
+- (Cntl-J를 누르면 pop-up이 뜬다.)
+
+보통은 잘 쓰지 않을 수도 있지만, 스피디하게 코딩해야 하는 대회에서 
+Abbreviations 기능은 매우 유용하다.
+typedef long long ll, using namespace std 등은 매우 자주 쓰이기 때문에 
+단축해놓는 것이 좋다.
+
+탐색하기. Cntl-F

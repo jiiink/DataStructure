@@ -1,0 +1,11 @@
+
+
+Settings -> Environment...
+General Settings >> Manage 버튼을 선택
+Check and Set File Associations
+
+1. 원하는 파일 extension을 선택한다.
+2. Button: "Manage"를 선택하여 누른다.
+3. 마지막으로 Button: "Set Now"을 누른다.
+
+이후 association icon이 바뀐 것을 볼 수 있다.

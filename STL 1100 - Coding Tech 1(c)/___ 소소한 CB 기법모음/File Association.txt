@@ -1,0 +1,8 @@
+
+
+Settings -> Environment...
+General Settings >> Manage 버튼을 선택
+Check and Set File Associations
+
+Post Edit 1: Button: "Manage"
+Button: "Set Now"

@@ -1,0 +1,8 @@
+1. 해당 라인을 긁어 뭉친다.
+
+2. Shift-Control + C를 한다.
+
+
+3. 이것은 toggle된다.
+
+4. 풀때는 Shift-Control-x

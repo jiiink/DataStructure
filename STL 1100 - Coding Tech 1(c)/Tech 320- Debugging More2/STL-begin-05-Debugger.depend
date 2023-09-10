@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1441691642 source:c:\users\defyax\desktop\stl-begin-05-debugger\main.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1441696519 source:c:\users\defyax\desktop\stl 2015 ds01 - beginning\stl-begin-05-debugger\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1441699684 source:c:\users\defyax\desktop\main.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1441700516 source:d:\연구실 408호실\강의- 2015년\____ 2015 자료구조\신자료구조 2015 stl 실습\stl 2015 01 - start\stl-begin-05-debugger\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1474526743 source:d:\연구실 408호실\강의- 2016년\2016 자료구조 (a)\자료구조 실습 stl 2016\stl 2016 010 - start\stl-begin-05-debugger\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1536030047 source:d:\___ working\stl 2019 lab 3(c)\stl 0100 - coding basic 1(b)\stl-begin- 500- debugging basic\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1536030047 source:d:\___ working\stl 2019 lab 3(e)\stl 0100 - coding basic 1(b)\stl-begin- 500- debugging basic\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1566870540 source:d:\___ working\stl 2019 lab 3(f)\stl 0100 - coding basic 1(b)\stl-begin- 500- debugging basic\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1566870540 source:d:\___ working\stl 2020 lab 1(b)\stl 1200 - coding tech 1(c)\coding 520- debugging more2\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1566870540 source:d:\___ working\stl 2020 lab 1(d)\stl 1100 - coding tech 1(c)\tech 320- debugging more2\stl-begin-05-debugger.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
