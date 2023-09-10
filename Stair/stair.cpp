@@ -1,142 +1,72 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
+#include <fstream>
 #include <sstream>
+#include <utility>
+#include <numeric>
 using namespace std;
 
-class Point {
-public:
-    int x, y;
-    int position = 0;
-    Point() {}
-    Point(int x, int y) : x(x), y(y) {}
-};
-
 int main() {
-    fstream myfile;
-    myfile.open("test2.txt", ios::in);
-
     string line;
-    vector<int> numbers;
-    getline(myfile, line);
-    // cout << line << endl;
     int number;
-    istringstream iss(line);
+    vector<int> numbers;
 
+    getline(cin, line);
+    istringstream iss(line);
     while (iss >> number) {
-        // istringstream iss(line);
-        // iss >> number;
-        if (number) {
+        if (number) { //store the integers in the first line except 0
             numbers.push_back(number);
         }
-        
-        // number++;
-        // cout << number << endl;
     }
 
-    vector<Point> points;
+    vector< pair<int, int> > corners; //corner is the edge of the stiars
+    for (int i=0; i<numbers.size(); i+=2) { //get each corners coordinate
+        int x = 0;
+        int y = 0;
+        for (int j=0; j<=i; j+=2) {
+            x += numbers[j];
+        }
+        for (int k=numbers.size(); k>i; k-=2) {
+            y += numbers[k-1];
+        }
+        corners.push_back(make_pair(x, y));
+    }
 
-    while (getline(myfile, line)) {
-        istringstream iss(line);
+    vector< pair<int, int> > points; //query point
+    while (true) {
+        getline(cin, line);
+        if (line.empty()) {
+            break;
+        }
         int x, y;
+        istringstream iss(line);
+        iss >> x >> y;
 
-        iss >> x;
-        iss >> y;
-
-        Point point(x, y);
-        points.push_back(point);
+        points.push_back(make_pair(x, y));
     }
 
-    // for (auto& point : points) {
-    //     cout << point.x << " " << point.y << endl;
-    // }
-
-    int numOfBox = numbers.size() % 2;
-    int boxes[numOfBox];
-
-    vector<int> hLines;
-    vector<int> vLines;
-    int i = 1;
-    for (auto& number : numbers) {
-        if (i % 2 == 1) {
-            hLines.push_back(number);
-        } else {
-            vLines.push_back(number);
-        }
-        i++;
-    }
-
-    for (auto& point : points) {
-        int status = 1;
-        int length = 0;
-        for (auto& hLine : hLines) {
-            length += hLine;
-            if (point.x <= length) {
-                point.position = status;
-                break;
+    for (auto& point : points) { //find the location of the query points with each corners
+        for (int i=0; i<corners.size(); i++) {
+            if (point.first == corners[i].first) {
+                if (point.second <= corners[i].second && point.second >= corners[i+1].second) {
+                    cout << "on" << endl;
+                    break;
+                }
             }
-            status++;
+            if (point.first < corners[i].first) {
+                if (point.second < corners[i].second) {
+                    cout << "in" << endl;
+                    break;
+                } else if (point.second > corners[i].second) {
+                    cout << "out" << endl;
+                    break;
+                } else {
+                    cout << "on" << endl;
+                    break;
+                }
+            }
         }
     }
-
-    string result;
-    for (auto& point : points) {
-        switch (point.position) {
-            case 1:
-                if (point.x < hLines[0] && point.y < vLines[0] + vLines[1] + vLines[2]) {
-                    result = "in";
-                } else if (point.x <= hLines[0] && (vLines[1]+vLines[2] <= point.y) &&(point.y<= vLines[0]+vLines[1]+vLines[2])) {
-                    result = "on";
-                } else if (vLines[0]+vLines[1]+vLines[2] < point.y) {
-                    result = "out";
-                }
-                cout << result << endl;
-                break;
-            case 2:
-                if ((hLines[0] < point.x)&&(point.x < hLines[0]+hLines[1]) && point.y < vLines[1]+vLines[2]) {
-                    result = "in";
-                } else if ((hLines[0] <= point.x)&& (point.x <= hLines[0]+hLines[1]) && (vLines[2] <= point.y)&&(point.y <= vLines[1]+vLines[2])) {
-                    result = "on";
-                } else if (vLines[1]+vLines[2] < point.y) {
-                    result = "out";
-                }
-                cout << result << endl;
-                break;
-            case 3:
-                if ((hLines[0]+hLines[1] < point.x)&& (point.x < hLines[0]+hLines[1]+hLines[2]) && point.y < vLines[2]) {
-                    result = "in";
-                } else if ((hLines[0]+hLines[1] <= point.x) && (point.x <= hLines[0]+hLines[1]+hLines[2]) && point.y <= vLines[2]) {
-                    result = "on";
-                } else if (vLines[2] < point.y) {
-                    result = "out";
-                }
-                cout << result << endl;
-                break;
-            // default;
-        }
-    }
-
-    
-    // for (auto& point : points) {
-    //     if (point.x < hLines[0] && point.y < vLines[0] + vLines[1] + vLines[2]) {
-    //         result = "in";
-    //     } else if (point.x <= hLines[0] && vLines[1]+vLines[2] <= point.y <= vLines[0]+vLines[1]+vLines[2]) {
-    //         result = "on";
-    //     } else if (vLines[0]+vLines[1]+vLines[2] < point.y) {
-    //         result = "out";
-    //     }
-    // }
-    
-    // cout << numbers[0] << endl;
-    // cout << number << endl;
-    // cout << numbers[0] << endl;
-
-    // for (auto& number : numbers) {
-    //     cout << number << " " ;
-    // }
-    // cout << endl;
-
-    myfile.close();
 
     return 0;
 }
