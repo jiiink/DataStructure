@@ -2,8 +2,6 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
-#include <utility>
-#include <numeric>
 using namespace std;
 
 int main() {
@@ -33,7 +31,7 @@ int main() {
     }
 
     vector< pair<int, int> > points; //query point
-    while (true) {
+    while (!cin.eof()) {
         getline(cin, line);
         if (line.empty()) {
             break;
@@ -47,20 +45,24 @@ int main() {
 
     for (auto& point : points) { //find the location of the query points with each corners
         for (int i=0; i<corners.size(); i++) {
-            if (point.first == corners[i].first) {
-                if (point.second <= corners[i].second && point.second >= corners[i+1].second) {
+            if (point.first > corners.back().first) { //when point's x is over the stair
+                cout << "out" << endl;
+                break;
+            }
+            if (point.first == corners[i].first) { 
+                if (point.second <= corners[i].second && point.second >= corners[i+1].second) {//when point is on the vertical side of stair
                     cout << "on" << endl;
                     break;
                 }
             }
-            if (point.first < corners[i].first) {
+            if (point.first <= corners[i].first) {
                 if (point.second < corners[i].second) {
                     cout << "in" << endl;
                     break;
                 } else if (point.second > corners[i].second) {
                     cout << "out" << endl;
                     break;
-                } else {
+                } else { //when point is on the horizontal side of stair
                     cout << "on" << endl;
                     break;
                 }
