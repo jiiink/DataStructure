@@ -10,47 +10,68 @@ void run_robo(vector< pair<int, int> >& points) {
     start_point = points[0];
     // cout << "start point" << endl;
     // cout << start_point.first << " " << start_point.second << endl;
-    // int k = 0;
-    // int j = 0;
-    pair<int, int> robo_point = start_point;
-    for (int i=0; i<20; i++) {
-        // int m = 0;
+    points.push_back(points[0]);
+    int k = 0;
+    int j = 0;
+    for (int i=0; i<13; i++) {
+        int m = 0;
         // cout << points.size() << endl;
-        // int before_x = points[k].first;
-        // int before_y = points[k].second;
-        // int after_x = points[k+1].first;
-        // int after_y = points[k+1].second;
-
+        int before_x = points[k].first;
+        int before_y = points[k].second;
+        int after_x = points[k+1].first;
+        int after_y = points[k+1].second;
         
-        if (robo_point.first == points[i].first) {
+        if (before_x == after_x) {
             // before_y++;
-            // j = k;
-            while (robo_point.second != points[i].second-1) {
-                std::cout << ".";
-                robo_point.second++;
-                // pair<int, int> point = make_pair(before_x, before_y);
-                // cout << point.first << " " << point.second << endl;
-                // points.insert(points.begin()+j+1, make_pair(before_x, before_y));
-                // j++;
-                // m++;
+            j = k;
+            if (before_y < after_y) {
+                while (before_y != after_y-1) {
+                    cout << ".";
+                    before_y++;
+                    // pair<int, int> point = make_pair(before_x, before_y);
+                    // cout << point.first << " " << point.second << endl;
+                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+                    j++;
+                    m++;
+                }
+            } else if (before_y > after_y) {
+                while (before_y != after_y+1) {
+                    cout << ".";
+                    before_y--;
+                    // pair<int, int> point = make_pair(before_x, before_y);
+                    // cout << point.first << " " << point.second << endl;
+                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+                    j++;
+                    m++;
+                }
             }
-        } else if (robo_point.second == points[i].second) {
-            // j = k;
-            while (robo_point.first != points[i].first - 1) {
-                std::cout << ".";
-                robo_point.first++;
-                // points.insert(points.begin()+j+1, make_pair(before_x, before_y));
-                // j++;
-                // m++;
+        } else if (before_y == after_y) {
+            j = k;
+            if (before_x < after_x) {
+                while (before_x != after_x-1) {
+                    cout << ".";
+                    before_x++;
+                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+                    j++;
+                    m++;
+                }
+            } else if (before_x > after_x) {
+                while (before_x != after_x+1) {
+                    cout << ".";
+                    before_x--;
+                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+                    j++;
+                    m++;
+                }
             }
         }
-        // k += (m+1);
-        // cout << "K : " << k << endl;
+        k += (m+1);
+        cout << "K : " << k << endl;
     }
-    // for (auto& point : points) {
-        // cout << point.first << " " << point.second << endl;
-    // }
-    std::cout << robo_point.first << " " << robo_point.second << endl;
+    for (auto& point : points) {
+        cout << point.first << " " << point.second << endl;
+    }
+    // std::cout << robo_point.first << " " << robo_point.second << endl;
 }
 
 void generate_point(vector< pair<int, int> >& points, int x, int y) {
@@ -103,88 +124,88 @@ void output() {
 
 int main() {
 
-    vector< pair<int, int> > test_points;
-    test_points.push_back(make_pair(3, 3));
-    test_points.push_back(make_pair(3, 7));
-    test_points.push_back(make_pair(7, 7));
-    test_points.push_back(make_pair(7, 10));
-    test_points.push_back(make_pair(11, 10));
-    test_points.push_back(make_pair(11, 6));
-    test_points.push_back(make_pair(15, 6));
-    test_points.push_back(make_pair(15, 1));
-    test_points.push_back(make_pair(9, 1));
-    test_points.push_back(make_pair(9, 5));
-    test_points.push_back(make_pair(6, 5));
-    test_points.push_back(make_pair(6, 3));
-    test_points.push_back(make_pair(3, 3));
-    int k = 0;
-    int j = 0;
-    for (int i=0; i<13; i++) {
-        int m = 0;
-        // cout << points.size() << endl;
-        int before_x = test_points[k].first;
-        int before_y = test_points[k].second;
-        int after_x = test_points[k+1].first;
-        int after_y = test_points[k+1].second;
+    // vector< pair<int, int> > test_points;
+    // test_points.push_back(make_pair(3, 3));
+    // test_points.push_back(make_pair(3, 7));
+    // test_points.push_back(make_pair(7, 7));
+    // test_points.push_back(make_pair(7, 10));
+    // test_points.push_back(make_pair(11, 10));
+    // test_points.push_back(make_pair(11, 6));
+    // test_points.push_back(make_pair(15, 6));
+    // test_points.push_back(make_pair(15, 1));
+    // test_points.push_back(make_pair(9, 1));
+    // test_points.push_back(make_pair(9, 5));
+    // test_points.push_back(make_pair(6, 5));
+    // test_points.push_back(make_pair(6, 3));
+    // test_points.push_back(make_pair(3, 3));
+    // int k = 0;
+    // int j = 0;
+    // for (int i=0; i<13; i++) {
+    //     int m = 0;
+    //     // cout << points.size() << endl;
+    //     int before_x = test_points[k].first;
+    //     int before_y = test_points[k].second;
+    //     int after_x = test_points[k+1].first;
+    //     int after_y = test_points[k+1].second;
         
-        if (before_x == after_x) {
-            // before_y++;
-            j = k;
-            if (before_y < after_y) {
-                while (before_y != after_y-1) {
-                    cout << ".";
-                    before_y++;
-                    // pair<int, int> point = make_pair(before_x, before_y);
-                    // cout << point.first << " " << point.second << endl;
-                    test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
-                    j++;
-                    m++;
-                }
-            } else if (before_y > after_y) {
-                while (before_y != after_y+1) {
-                    cout << ".";
-                    before_y--;
-                    // pair<int, int> point = make_pair(before_x, before_y);
-                    // cout << point.first << " " << point.second << endl;
-                    test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
-                    j++;
-                    m++;
-                }
-            }
-        } else if (before_y == after_y) {
-            j = k;
-            if (before_x < after_x) {
-                while (before_x != after_x-1) {
-                    cout << ".";
-                    before_x++;
-                    test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
-                    j++;
-                    m++;
-                }
-            } else if (before_x > after_x) {
-                while (before_x != after_x+1) {
-                    cout << ".";
-                    before_x--;
-                    test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
-                    j++;
-                    m++;
-                }
-            }
-        }
-        k += (m+1);
-        cout << "K : " << k << endl;
-    }
-    for (auto& point : test_points) {
-        cout << point.first << " " << point.second << endl;
-    }
+    //     if (before_x == after_x) {
+    //         // before_y++;
+    //         j = k;
+    //         if (before_y < after_y) {
+    //             while (before_y != after_y-1) {
+    //                 cout << ".";
+    //                 before_y++;
+    //                 // pair<int, int> point = make_pair(before_x, before_y);
+    //                 // cout << point.first << " " << point.second << endl;
+    //                 test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
+    //                 j++;
+    //                 m++;
+    //             }
+    //         } else if (before_y > after_y) {
+    //             while (before_y != after_y+1) {
+    //                 cout << ".";
+    //                 before_y--;
+    //                 // pair<int, int> point = make_pair(before_x, before_y);
+    //                 // cout << point.first << " " << point.second << endl;
+    //                 test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
+    //                 j++;
+    //                 m++;
+    //             }
+    //         }
+    //     } else if (before_y == after_y) {
+    //         j = k;
+    //         if (before_x < after_x) {
+    //             while (before_x != after_x-1) {
+    //                 cout << ".";
+    //                 before_x++;
+    //                 test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
+    //                 j++;
+    //                 m++;
+    //             }
+    //         } else if (before_x > after_x) {
+    //             while (before_x != after_x+1) {
+    //                 cout << ".";
+    //                 before_x--;
+    //                 test_points.insert(test_points.begin()+j+1, make_pair(before_x, before_y));
+    //                 j++;
+    //                 m++;
+    //             }
+    //         }
+    //     }
+    //     k += (m+1);
+    //     cout << "K : " << k << endl;
+    // }
+    // for (auto& point : test_points) {
+    //     cout << point.first << " " << point.second << endl;
+    // }
 
 
 
-    // vector< pair<int, int> > points;
-    // input(points);
+    vector< pair<int, int> > points;
+    input(points);
     // generate_point(); // In input()
-    // run_robo(points);       
-    // output();
+    run_robo(points);       
+    output();
 
     return 0;
 }
