@@ -1,53 +1,46 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
+// #include <sstream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
+
+// make route between points
 void make_route(int& numOfPoints, vector< pair<int, int> >& points) {
     points.push_back(points[0]);
     int k = 0;
     int j = 0;
     for (int i=0; i<numOfPoints+1; i++) {
         int m = 0;
-        int before_x = points[k].first;
-        int before_y = points[k].second;
-        int after_x = points[k+1].first;
-        int after_y = points[k+1].second;
+        pair<int, int> before = points[k];
+        pair<int, int> after = points[k+1];
         
-        if (before_x == after_x) {
+        if (before.first == after.first) { // same x
             j = k;
-            if (before_y < after_y) {
-                while (before_y++ != after_y-1) {
-                    // before_y++;
-   
-                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+            if (before.second < after.second) {
+                while (before.second++ != after.second-1) {
+                    points.insert(points.begin()+j+1, before);
                     j++;
                     m++;
                 }
             } else {
-                while (before_y-- != after_y+1) {
-                    // before_y--;
-                
-                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+                while (before.second-- != after.second+1) {
+                    points.insert(points.begin()+j+1, before);
                     j++;
                     m++;
                 }
             }
-        } else if (before_y == after_y) {
+        } else if (before.second == after.second) {// same y
             j = k;
-            if (before_x < after_x) {
-                while (before_x++ != after_x-1) {
-                    // before_x++;
-                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+            if (before.first < after.first) {
+                while (before.first++ != after.first-1) {
+                    points.insert(points.begin()+j+1, before);
                     j++;
                     m++;
                 }
             } else {
-                while (before_x-- != after_x+1) {
-                    // before_x--;
-                    points.insert(points.begin()+j+1, make_pair(before_x, before_y));
+                while (before.first-- != after.first+1) {
+                    points.insert(points.begin()+j+1, before);
                     j++;
                     m++;
                 }
@@ -79,6 +72,8 @@ void input(int& numOfPoints, vector< pair<int, int> >& points, int* times) {
     }
     cin >> times[0] >> times[1] >> times[2] >> times[3] >> times[4];
 }
+
+
 
 int main() {
     int numOfPoints;
