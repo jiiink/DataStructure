@@ -5,15 +5,28 @@
 using namespace std;
 
 
+int numOfPoints;
+
+vector< pair<int, int> > points;
+
+int times[5];
+
+
+
 // make route between points
-void make_route(int& numOfPoints, vector< pair<int, int> >& points) {
+void make_route() {
     points.push_back(points[0]);
     int k = 0;
     int j = 0;
-    for (int i=0; i<numOfPoints+1; i++) {
+    // // cout << points.size() << endl;
+    for (int i=0; i<points.size()-1; i++) {
         int m = 0;
         pair<int, int> before = points[k];
         pair<int, int> after = points[k+1];
+        // int before_x = before.first;
+        // int before_y = before.second;
+        // int after_x = after.first;
+        // int after_y = after.second;
         
         if (before.first == after.first) { // same x
             j = k;
@@ -49,9 +62,17 @@ void make_route(int& numOfPoints, vector< pair<int, int> >& points) {
         k += (m+1);
     }
     points.pop_back();
+
+    cout << "point : " << points.size() << endl;
+    for (auto& point : points) {
+        cout << point.first << " " << point.second << endl;
+    }
+    // for (int i=0; i<points.size(); i++) {
+    //     cout << points[i].first << " " << points[i].second << endl;
+    // }
 }
 
-void run_robo(vector< pair<int, int> >& points, int* times) {
+void run_robo() {
     int index;
     for (int i=0; i<5; i++) {
         index = times[i] % points.size();
@@ -59,29 +80,33 @@ void run_robo(vector< pair<int, int> >& points, int* times) {
     }
 }
 
-void generate_point(vector< pair<int, int> >& points, int x, int y) {
+void generate_point(int x, int y) {
     points.push_back(make_pair(x, y));
 }
 
-void input(int& numOfPoints, vector< pair<int, int> >& points, int* times) {
+void input() {
     cin >> numOfPoints;
     for (int i=0; i<numOfPoints; i++) {
         int x, y;
         cin >> x >> y;
-        generate_point(points, x, y);
+        generate_point(x, y);
     }
-    cin >> times[0] >> times[1] >> times[2] >> times[3] >> times[4];
+    for (int i=0; i<5; i++) {
+        cin >> times[i];
+    }
 }
 
 
 
 int main() {
-    int numOfPoints;
-    vector< pair<int, int> > points;
-    int times[5];
-    input(numOfPoints, points, times);
-    make_route(numOfPoints, points);
-    run_robo(points, times);
+    // points.push_back(make_pair(1, 2));
+    // cout << points[0].first << " " << points[0].second << endl;
+    input();
+    make_route();
+    // run_robo();
+    // for (auto& point : points) {
+    //     cout << point.first << " " << point.second << endl;
+    // }
 
     return 0;
 }
