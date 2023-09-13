@@ -1,5 +1,6 @@
 #include <iostream>
-// #include <sstream>
+// #include <bits/stdc++.h>
+#include <sstream>
 #include <algorithm>
 #include <vector>
 using namespace std;
@@ -12,7 +13,7 @@ vector< pair<int, int> > points;
 int times[5];
 
 
-
+// datastructure to explain the shape
 // make route between points
 void make_route() {
     points.push_back(points[0]);
@@ -91,9 +92,26 @@ void input() {
         cin >> x >> y;
         generate_point(x, y);
     }
-    for (int i=0; i<5; i++) {
-        cin >> times[i];
-    }
+    // for (int i=0; i<5; i++) {
+    //     cin >> times[i];
+    // }
+    cin >> times[0] >> times[1] >> times[2] >> times[3] >> times[4];
+    // while (!cin.eof()) {
+    //     string line;
+    //     getline(cin, line);
+    //     if (!line.empty()) {
+    //         break;
+    //     }
+    //     istringstream iss(line);
+    //     int x, y;
+    //     iss >> x >> y;
+    //     generate_point(x, y);
+    // }
+    // string line;
+    // getline(cin, line);
+    // istringstream iss(line);
+    // iss >> times[0] >> times[1] >> times[2] >> times[3] >> times[4]; 
+
 }
 
 
