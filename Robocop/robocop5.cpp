@@ -1,63 +1,130 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 int numOfPoints;
 vector< pair<int, int> > points;
 int times[5];
-
+vector<int> distances;
+vector<float> each_distances;
 
 
 void output(int x, int y) {
     cout << x << " " << y << endl;
 }
 
-void get_distances(int* distances) {
+void get_distances() {
     points.push_back(points[0]);
-    distances[0] = 0;
+    distances.push_back(0);
     int distance_from_start = 0;
-    vector<int> each_distances;
+    int each_distance = 0;
+
 
     for (int i=0; i<points.size()-1; i++) {
-        each_distances.push_back(abs(points[i].first - points[i+1].first) + abs(points[i].second - points[i+1].second));
+        float each = (abs(points[i].first - points[i+1].first) + abs(points[i].second - points[i+1].second));
+        each_distances.push_back(each);
+        each_distance += each;
+        distances.push_back(each_distance);
+        // cout << each_distance << " ";
     }
+    // cout << "distance" << endl;
+    // for (auto& distance : distances) {
+    //     cout << distance << " ";
+    // }
+    // cout << endl;
+    // cout << "each_distance" << endl;
+    // for (auto& distance : each_distances) {
+    //     cout << distance << " ";
+    // }
+    // cout << endl;
 
-    int i = 1;
-    for (auto& each : each_distances) {
-        distance_from_start += each;
-        distances[i++] = distance_from_start;
-    }
+
+
+
+    // for (auto& point : points) {
+    //     each_distance += abs(point.first - point.first) + abs(point.second - point.second);
+    //     distances.push_back(each_distance);
+    //     cout << each_distance << " ";
+    // }
+    // cout << endl;
+    
+
+    // int i = 1;
+    // for (auto& each : each_distances) {
+    //     distance_from_start += each;
+    //     distances[i++] = distance_from_start;
+    // }
 }
 
 
-void run_robo(int* distances, int time) {
-    int index;
-    int max_stop = -1;
-    for (int i=0; i<points.size(); i++) {
-        if (distances[i] < time && distances[i] > max_stop) {
-            max_stop = distances[i];
-            index = i;
+void run_robo(int time) {
+    // int time %= distances.back();
+    // cout << "time : " << time << endl;
+    vector<pair<int, int> > directions;
+    // pair<int, int> depart_point;
+    int time_minus_distance = 0;
+    int i;
+    for (i=0; i<distances.size(); i++) {
+        if (time <= distances[i]) {
+            // depart_point = points[i];
+            time_minus_distance = time - distances[i-1];
+            break;
         }
     }
-    int before_x = points[index].first;
-    int before_y = points[index].second;
-    int after_x = points[index+1].first;
-    int after_y = points[index+1].second; 
+    directions.push_back(make_pair(points[i-1].first + time_minus_distance, points[i-1].second)); // + x
+    directions.push_back(make_pair(points[i-1].first - time_minus_distance, points[i-1].second)); // - x
+    directions.push_back(make_pair(points[i-1].first, points[i-1].second + time_minus_distance)); // + y
+    directions.push_back(make_pair(points[i-1].first, points[i-1].second - time_minus_distance)); // - y
+
+    // cout << "directions" << endl;
+    // for (auto& direction : directions) {
+    //     cout << direction.first << " " << direction.second << endl;
+    // }
+    // int min = INT_MAX;
+    // for (auto& direction : directions) {
+    //     int dist = hypot(points[i+1].first - direction.first, points[i+1].second - direction.second);
+    //     if (dist < min) {
+    //         min = dist;
+    //     }
+    // }
+    // cout << "result" << endl;
+    for (int j=0; j<4; j++) {
+        float dist = hypot(directions[j].first - points[i].first, directions[j].second - points[i].second);
+        if (dist <= each_distances[i-1]) {
+            output(directions[j].first, directions[j].second);
+        }
+    }
+
+
+
+    // int index;
+    // int max_stop = -1;
+    // for (int i=0; i<points.size(); i++) {
+    //     if (distances[i] < time && distances[i] > max_stop) {
+    //         max_stop = distances[i];
+    //         index = i;
+    //     }
+    // }
+    // int before_x = points[index].first;
+    // int before_y = points[index].second;
+    // int after_x = points[index+1].first;
+    // int after_y = points[index+1].second; 
     
-    int time_minus_distant = time - distances[index];
-    if (before_x == after_x) { // same x
-        if (before_y < after_y) {
-            output(before_x, before_y + time_minus_distant);
-        } else {
-            output(before_x, before_y - time_minus_distant);
-        }
-    } else if (before_y == after_y) { // same y
-        if (before_x < after_x) {
-            output(before_x + time_minus_distant, before_y);
-        } else {
-            output(before_x - time_minus_distant, before_y);
-        }
-    }
+    // int time_minus_distant = time - distances[index];
+    // if (before_x == after_x) { // same x
+    //     if (before_y < after_y) {
+    //         output(before_x, before_y + time_minus_distant);
+    //     } else {
+    //         output(before_x, before_y - time_minus_distant);
+    //     }
+    // } else if (before_y == after_y) { // same y
+    //     if (before_x < after_x) {
+    //         output(before_x + time_minus_distant, before_y);
+    //     } else {
+    //         output(before_x - time_minus_distant, before_y);
+    //     }
+    // }
 }
 
 void generate_point(int x, int y) {
@@ -80,13 +147,14 @@ void input() {
 
 int main() {
     input();
-    int distances[numOfPoints+1];
+    // int distances[numOfPoints+1];
     
-    get_distances(distances);
+    get_distances();
 
+    // run_robo();
     for (auto& time : times) {
         time %= distances[numOfPoints];
-        run_robo(distances, time);
+        run_robo(time);
     }
 
 

@@ -1,33 +1,26 @@
 #include <iostream>
-// #include <bits/stdc++.h>
 #include <sstream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
 
-int numOfPoints;
+static int numOfPoints;
 
-vector< pair<int, int> > points;
+static vector< pair<int, int> > points;
 
-int times[5];
+static int times[5];
 
 
-// datastructure to explain the shape
 // make route between points
 void make_route() {
     points.push_back(points[0]);
     int k = 0;
     int j = 0;
-    // // cout << points.size() << endl;
-    for (int i=0; i<points.size()-1; i++) {
+    for (int i=0; i<numOfPoints+1; i++) {
         int m = 0;
         pair<int, int> before = points[k];
         pair<int, int> after = points[k+1];
-        // int before_x = before.first;
-        // int before_y = before.second;
-        // int after_x = after.first;
-        // int after_y = after.second;
         
         if (before.first == after.first) { // same x
             j = k;
@@ -63,14 +56,6 @@ void make_route() {
         k += (m+1);
     }
     points.pop_back();
-
-    cout << "point : " << points.size() << endl;
-    for (auto& point : points) {
-        cout << point.first << " " << point.second << endl;
-    }
-    // for (int i=0; i<points.size(); i++) {
-    //     cout << points[i].first << " " << points[i].second << endl;
-    // }
 }
 
 void run_robo() {
@@ -92,39 +77,15 @@ void input() {
         cin >> x >> y;
         generate_point(x, y);
     }
-    // for (int i=0; i<5; i++) {
-    //     cin >> times[i];
-    // }
     cin >> times[0] >> times[1] >> times[2] >> times[3] >> times[4];
-    // while (!cin.eof()) {
-    //     string line;
-    //     getline(cin, line);
-    //     if (!line.empty()) {
-    //         break;
-    //     }
-    //     istringstream iss(line);
-    //     int x, y;
-    //     iss >> x >> y;
-    //     generate_point(x, y);
-    // }
-    // string line;
-    // getline(cin, line);
-    // istringstream iss(line);
-    // iss >> times[0] >> times[1] >> times[2] >> times[3] >> times[4]; 
-
 }
 
 
 
 int main() {
-    // points.push_back(make_pair(1, 2));
-    // cout << points[0].first << " " << points[0].second << endl;
     input();
     make_route();
-    // run_robo();
-    // for (auto& point : points) {
-    //     cout << point.first << " " << point.second << endl;
-    // }
+    run_robo();
 
     return 0;
 }
