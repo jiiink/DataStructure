@@ -77,7 +77,10 @@ void input() {
         cin >> x >> y;
         generate_point(x, y);
     }
-    cin >> times[0] >> times[1] >> times[2] >> times[3] >> times[4];
+    for (int i=0; i<5; i++) {
+        cin >> times[i];
+    }
+    // cin >> times[0] >> times[1] >> times[2] >> times[3] >> times[4];
 }
 
 
