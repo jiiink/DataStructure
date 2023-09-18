@@ -8,7 +8,7 @@ int main() {
     int arr[] = { 6, 3, 5, 2, 8 };
     array<int,5> brr { 6, 3, 5, 2, 8 };
     int n = sizeof(arr)/sizeof(arr[0]);
-    int elem = 2;
+    int elem = 19;
 
     auto itr = find(arr, arr + n, elem);
 

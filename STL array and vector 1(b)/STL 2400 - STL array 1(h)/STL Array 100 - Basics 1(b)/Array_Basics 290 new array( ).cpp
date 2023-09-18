@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std ;
 #define allout(MSG,X)   cout<<"\n"<<MSG<<"\n ";for(auto w:X)cout<<w<<"\n "
-
+#define mysize 100
 
 int main() {
+    // int mysize = 100;
 
-
-   array <int, 6> *mymy ;
-   mymy = new array<int, 6> () ;
+   array <int, mysize> *mymy ;
+   mymy = new array<int, mysize> () ;
 
 
    (*mymy)[1] = 501 ;

@@ -12,6 +12,7 @@ int main() {
     i = 0 ;
 
     for_each(array, &array[999], set_array ) ;
+    // for_each(array, &array[999], cout<<array<<endl;) ;
 
     cout << "\n 실험이 끝났습니다. \n" ;
 }
