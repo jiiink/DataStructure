@@ -1,5 +1,5 @@
-8  6
-Banana T 8 4.67 1
+8  3
+Banana    T 8 4.67 1
 Some B 9 3.77 0
 Times H 2 1.11 2
 IPA H 7 2.45 3
