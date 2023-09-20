@@ -16,10 +16,10 @@ int main() {
  cout << "\n onevec.front( )  = " << onevec.front()  ;
  cout << "\n onevec.back( ) = "   << onevec.back() ;
 
- if ( emptyvec.empty ) { cout << "ë¹„ì–´ìˆëŠ” vector " ; }
+ if ( emptyvec.empty() ) { cout << "ë¹„ì–´?ˆ?Š” vector " ; }
  // cout << "\n emptyvec.front( )  = " << emptyvec.front()  ;
  // cout << "\n emptyvec.back( ) = "   << emptyvec.back() ;
- // Null vectorì—ì„œ front( ), back( )ì€ ì˜¤ë¥˜ë¥¼ ë°œìƒì‹œí‚¨ë‹¤.
+ // Null vector?—?„œ front( ), back( )??? ?˜¤ë¥˜ë?? ë°œìƒ?‹œ?‚¨?‹¤.
 
 } // end of main()
 
