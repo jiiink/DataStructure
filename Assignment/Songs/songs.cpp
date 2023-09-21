@@ -33,7 +33,7 @@ bool mysort(Song i, Song j) {
         return i.download > j.download;
     }
     if (i.broadcasting == j.broadcasting && i.download == j.download && i.size < j.size) {
-        return i.size < j.size;
+        return false;
     }
 }
 bool g_sort(Song i, Song j) {
