@@ -24,8 +24,8 @@ int ranking = 0;
 vector<Song> songs;
 
 
+
 bool mysort(Song i, Song j) {
-    // cout << "mysort" << endl;
     if (i.broadcasting > j.broadcasting) {
         return i.broadcasting > j.broadcasting;
     }
@@ -34,17 +34,10 @@ bool mysort(Song i, Song j) {
     }
     if (i.broadcasting == j.broadcasting && i.download == j.download && i.size < j.size) {
         return i.size < j.size;
-    }
-}
-bool g_sort(Song i, Song j) {
-    // cout << "g_sort" << endl;
-    if (i.genre != j.genre) {
-        return i.genre != j.genre;
     } else {
         return false;
     }
 }
-
 
 
 
@@ -87,15 +80,15 @@ void input() {
 }
 
 void output() {
+    int ranking_index = ranking - 1;
     if (ranking == 1) {
-        cout << songs[ranking-1].title << endl;
+        cout << songs[ranking_index].title << endl;
         return;
     }
-    int ranking_index = ranking - 1;
     // if (songs[ranking_index].genre == songs[ranking_index-1].genre) {
 
     // }
-    while (songs[ranking_index].genre == songs[ranking_index-1].genre) {
+    while (songs[ranking_index].genre == songs[ranking_index-1].title) {
         ranking_index++;
     }
     cout << songs[ranking_index].title << endl;
