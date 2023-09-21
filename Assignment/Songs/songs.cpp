@@ -14,9 +14,9 @@ class Song {
         Song() {}
         Song(string t, string g, int b, double s, int d) : title(t), genre(g), broadcasting(b), size(s), download(d) {}
         void print() {
-            cout << this->title << " " << this->genre << " " << this->broadcasting << " " << this->size << " " << this->download << endl;
+            cout << this->title << "\t" << this->genre << "\t" << this->broadcasting << "\t" << this->size << "\t" << this->download << endl;
         }
-        ~Song() {}
+        // ~Song() {}
 };
 
 int n = 0;
@@ -33,6 +33,8 @@ bool mysort(Song i, Song j) {
     }
     if (i.broadcasting == j.broadcasting && i.download == j.download && i.size < j.size) {
         return i.size < j.size;
+    } else {
+        return true;
     }
 }
 
@@ -94,14 +96,14 @@ void output() {
 
 int main() {
     input();
-    sort(songs.begin(), songs.end(), mysort);
+    sort(songs.begin(), songs.end()-1, mysort);
 
     cout << "\n--------------\n"; 
     for (auto& song : songs) {
         song.print();
     }
 
-    output();
+    // output();
 
     return 0;
 }
