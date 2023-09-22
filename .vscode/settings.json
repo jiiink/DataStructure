@@ -7,6 +7,7 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "istream": "cpp",
-        "array": "cpp"
+        "array": "cpp",
+        "deque": "cpp"
     }
 }

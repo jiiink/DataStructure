@@ -1,117 +1,124 @@
 #include <iostream>
 #include <sstream>
-#include <vector>
+#include <map>
 #include <algorithm>
+#include <deque>
 using namespace std;
+
+
+
 
 class Song {
     public:
         string title;
-        string genre;
-        int broadcasting;
+        int broadcasting = 0;
         double size;
         int download;
         Song() {}
-        Song(string t, string g, int b, double s, int d) : title(t), genre(g), broadcasting(b), size(s), download(d) {}
-        void print() {
-            cout << this->title << "\t" << this->genre << "\t" << this->broadcasting << "\t" << this->size << "\t" << this->download << endl;
+        Song(string t, int b, double s, int d) : title(t), broadcasting(b), size(s), download(d) {}
+        
+        bool operator>(Song s) {
+            if (this->broadcasting == s.broadcasting) {
+                if (this->download == s.download) {
+                    return this->size < s.size;
+                }
+                return this->download > s.download;
+            }
+            return this->broadcasting > s.broadcasting;
         }
-        // ~Song() {}
 };
 
-int n = 0;
-int ranking = 0;
-vector<Song> songs;
+int number_of_songs;
+int ranking; // the song want to find
 
-bool mysort(Song i, Song j) {
-    // cout << "mysort" << endl;
-    if (i.broadcasting > j.broadcasting && i.genre != j.genre) {
-        return true;
-    }
-    if (i.broadcasting == j.broadcasting && i.download > j.download && i.genre != j.genre) {
-        return true;
-    }
-    if (i.broadcasting == j.broadcasting && i.download == j.download && i.size < j.size && i.genre != j.genre) {
-        return true;
-    } else {
-        return false;
-    }
-}
-// bool g_sort(Song i, Song j) {
-//     // cout << "g_sort" << endl;
-//     if (i.genre != j.genre) {
-//         return i.genre != j.genre;
-//     } else {
-//         return false;
-//     }
-// }
+array< deque<Song>, 5 > songs; // store Songs in deque with each genres
+
+// to express genre to index
+array<int, 5> g_array = {0, 1, 2, 3, 4};// T, B, H, P, D
+map<char, int> g_map = {
+    {'T', 0},
+    {'B', 1},
+    {'H', 2},
+    {'P', 3},
+    {'D', 4}
+};
+
 
 
 
 
 void input() {
-    string first_line;
-    getline(cin, first_line);
-    istringstream iss(first_line);
-    
-    
-    iss >> n >> ranking;
+    string line;
+    getline(cin, line);
+    istringstream iss(line);
 
-    
+    iss >> number_of_songs >> ranking;
     
     while (!cin.eof()) {
-        string line;
         getline(cin, line);
-        if (line.empty()) {
-            break;
-        }
+        if (line.empty()) break;
         istringstream iss(line);
         
-
         string title;
-        string genre;
-        int broadcasting;
+        char genre;
+        int broadcasting, download;
         double size;
-        int download;
 
         iss >> title >> genre >> broadcasting >> size >> download;
 
-        songs.emplace_back(title, genre, broadcasting, size, download);
+        songs[g_map[genre]].emplace_back(title, broadcasting, size, download);
     }
-    cout << n << " " << ranking << endl;
-
-    cout << "\n--------------\n"; 
-    for (auto& song : songs) {
-        song.print();
-    }
-
 }
 
-void output() {
-    if (ranking == 1) {
-        cout << songs[ranking-1].title << endl;
-        return;
-    }
-    int ranking_index = ranking - 1;
-    // if (songs[ranking_index].genre == songs[ranking_index-1].genre) {
 
-    // }
-    while (songs[ranking_index].genre == songs[ranking_index-1].genre) {
-        ranking_index++;
-    }
-    cout << songs[ranking_index].title << endl;
+
+
+bool mysort(Song i, Song j) {
+    return i > j;
 }
+void sort_each_genre() {
+    for (auto& index : g_array) { // sort the songs with each genres
+        sort(songs[index].begin(), songs[index].end(), mysort);
+    }
+}
+
+
+
+
+
+
+void find_rank() {
+    int ranked_genre = -1; // the ranked song's genre
+    int last_genre = -1; // the latest ranked song's genre
+   
+
+    for (int i=1; i<=ranking; i++) {
+        Song rank_song;
+        for (auto& genre : g_array) { // find the most popular song among genres
+
+            if (genre == last_genre) continue; // except the song with same genre 
+         
+            if (songs[genre].front() > rank_song) {
+                rank_song = songs[genre].front();
+                
+                ranked_genre = genre;
+            }
+        }
+        if (i == ranking) cout << rank_song.title << endl;
+
+        songs[ranked_genre].pop_front();
+        last_genre = ranked_genre;
+    }
+}
+
+
 
 int main() {
     input();
-    sort(songs.begin(), songs.end(), mysort);
+ 
+    sort_each_genre();
 
-    cout << "\n--------------\n"; 
-    for (auto& song : songs) {
-        song.print();
-    }
-
-    // output();
+    find_rank();
 
     return 0;
 }
