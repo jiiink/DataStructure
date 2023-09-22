@@ -6,6 +6,7 @@
         "regex": "cpp",
         "ostream": "cpp",
         "iostream": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "array": "cpp"
     }
 }

@@ -23,27 +23,28 @@ int n = 0;
 int ranking = 0;
 vector<Song> songs;
 
-
 bool mysort(Song i, Song j) {
     // cout << "mysort" << endl;
-    if (i.broadcasting > j.broadcasting) {
-        return i.broadcasting > j.broadcasting;
+    if (i.broadcasting > j.broadcasting && i.genre != j.genre) {
+        return true;
     }
-    if (i.broadcasting == j.broadcasting && i.download > j.download) {
-        return i.download > j.download;
+    if (i.broadcasting == j.broadcasting && i.download > j.download && i.genre != j.genre) {
+        return true;
     }
-    if (i.broadcasting == j.broadcasting && i.download == j.download && i.size < j.size) {
-        return false;
-    }
-}
-bool g_sort(Song i, Song j) {
-    // cout << "g_sort" << endl;
-    if (i.genre != j.genre) {
-        return i.genre != j.genre;
+    if (i.broadcasting == j.broadcasting && i.download == j.download && i.size < j.size && i.genre != j.genre) {
+        return true;
     } else {
         return false;
     }
 }
+// bool g_sort(Song i, Song j) {
+//     // cout << "g_sort" << endl;
+//     if (i.genre != j.genre) {
+//         return i.genre != j.genre;
+//     } else {
+//         return false;
+//     }
+// }
 
 
 
