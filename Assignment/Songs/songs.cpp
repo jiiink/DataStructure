@@ -1,8 +1,9 @@
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <algorithm>
-#include <deque>
+// #include <iostream>
+// #include <sstream>
+// #include <map>
+// #include <algorithm>
+// #include <deque>
+#include <bits/stdc++.h>
 using namespace std;
 
 
