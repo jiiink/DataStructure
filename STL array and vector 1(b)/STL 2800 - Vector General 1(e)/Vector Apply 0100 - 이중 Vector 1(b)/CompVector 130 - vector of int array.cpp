@@ -13,4 +13,13 @@ int main() {
             cout << A[i] << ", " ;
         }
     }
+
+    array<int, 3> myarr = {99, 100, 101};
+
+    devec.insert(devec.begin(), myarr);
+    devec.pop_back();
+
+    for (auto& item : devec) {
+        cout << item[0] << " " << item[1] << " " << item[2] << endl;
+    }
 } // end of main()

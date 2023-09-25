@@ -17,7 +17,7 @@ string mystr ;
 int main(){
 
 	ifstream fin("Heaven.txt");	//Initialize & Reading Words
-	while(!fin.eof()){
+	while(!fin.eof()) {
 		string temp;
 		fin>>temp;
 		Text.push_back(temp);

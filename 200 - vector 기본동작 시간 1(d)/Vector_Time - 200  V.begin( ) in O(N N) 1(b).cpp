@@ -14,7 +14,8 @@ void insert_begin( ){
      int Ln  ;
      Ln = N[ Gindex] ;
      for (int i=0; i< Ln ; i++) {
-          V[Gindex].insert( V[Gindex].begin(), i );
+        //   V[Gindex].insert( V[Gindex].begin(), i );
+          V[Gindex].push_back(i);
      }
 }
 
