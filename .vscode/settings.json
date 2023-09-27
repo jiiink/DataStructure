@@ -8,6 +8,8 @@
         "iostream": "cpp",
         "istream": "cpp",
         "array": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "__split_buffer": "cpp",
+        "list": "cpp"
     }
 }
