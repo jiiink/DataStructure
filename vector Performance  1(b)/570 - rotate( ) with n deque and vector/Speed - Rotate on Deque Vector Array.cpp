@@ -7,7 +7,7 @@
 using namespace std ;
 
 #define Lsize 5
-#define N     500000   // 100만개를 사용
+#define N     50000000   // 100만개를 사용
 
 vector <int> Vec ;
 deque  <int> Deq ;
