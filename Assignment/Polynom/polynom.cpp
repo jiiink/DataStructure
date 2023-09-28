@@ -19,7 +19,6 @@ vector<int> e_vector;
 
 
 
-
 void output() {
     if (calculated_terms.size() == 0) { // f(x) = 0 
         cout << "0 0" << endl;
