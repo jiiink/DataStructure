@@ -3,7 +3,18 @@ using namespace std;
 
 
 // vector< vector<int> >;
-vector< vector<int> > room;
+
+vector< vector<int> > room = {
+    {15, 27, 30},
+    {34},
+    {42},
+    {45, 51},
+    {56, 62, 69},
+    {72},
+    {80, 89, 98},
+    {112},
+    {125}
+};
 vector< vector<int> > empty_vector;
 vector<int> seats;
 vector<int> movings;
@@ -44,6 +55,7 @@ void split(vector<int>& seats) {
     for (auto& seats : room) {
         if (seats.empty()) {
             room.erase(room.begin() + index);
+            break;
         }
         index++;
     }
