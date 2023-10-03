@@ -1,167 +1,97 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-// vector< vector<int> >;
-vector< vector<int> > room;
-vector< vector<int> > empty_vector;
+vector< vector<int> > room(1);
 vector<int> seats;
-vector<int> movings;
-int n, k;
+vector<int> movings; // in and out of waiting
+int k;
 
 
-void input() {
-    string mov;
-    int seat;
-    cin >> n >> k;
-    while (n--) {
-        cin >> mov >> seat;
-        if (mov == "-") seat *= -1;
-        movings.push_back(seat);
-        // cout << "input : " << mov << seat << endl;
-    }
+
+bool mysort(vector<int> a, vector<int> b) { // sort by first element of vector
+    return a.front() < b.front();
 }
 
-bool mysort(vector<int> a, vector<int> b) {
-    return a[0] < b[0];
-}
-
-void split(vector<int>& seats) {
-    cout << "split\n";
-    // after split, 
-    // sort(room.begin, room.end, mysort)
-
-    size_t mid_point = seats.size() / 2;
-    // cout << mid_point << endl;
+void split(vector<int>& seats, int index) {
+    int mid_point = seats.size() / 2;
     vector<int> left(seats.begin(), seats.begin()+mid_point);
     vector<int> right(seats.begin()+mid_point, seats.end());
 
-    seats.clear();
-    // seats.shrink_to_fit();
-    // room.shrink_to_fit();
-
-    int index = 0;
-    for (auto& seats : room) {
-        if (seats.empty()) {
-            room.erase(room.begin() + index);
-        }
-        index++;
-    }
-    // seats.insert(seats.end(), left.begin(), left().end());
+    room.erase(room.begin() + index);
+ 
     room.push_back(left);
     room.push_back(right);
     sort(room.begin(), room.end(), mysort);
 }
 
-void adding(int value) {
-    cout << "adding " << value << endl;
-    // for (auto& seats : room) {
-    //     // for (auto& seat : seats) {
-    //     //     if (value > seat) {
-    //     //         seats.push_back(value);
-    //     //     }
-    //     //     if (value < seat) {
-    //     //         seats.insert(value);
-    //     //     }
-    //     // }
-    //     for (auto position = seats.begin(); position != seats.end(); position++) {
-    //         if (value > *position) {
-    //             seats.push_back(value);
-    //         }
-    //         if (value < *position) {
-    //             seats.insert(position, value);
-    //         }
-    //     }
-
-    //     if (seats.size() == 2*k) {
-    //         split();
-    //     }
-    // }
-
-    for (auto position = room.rbegin(); position != room.rend(); position++) {
-        if (position == room.rend() - 1) {
-            // cout << "first if\n";
-            (*position).push_back(value);
-            sort((*position).begin(), (*position).end());
-            // break;
-            if ((*position).size() == 2*k) {
-                split(*position);
-                break;
-            }
-            break;
-        }
-        else if (value > (*position)[0]) {
-            // cout << "second if\n";
-            (*position).push_back(value);
-            sort((*position).begin(), (*position).end());
-            // break;
-            if ((*position).size() == 2*k) {
-                split(*position);
-                break;
-            }
-            break;
-        }
-        // if ((*position).size() == 2*k) {
-        //     split();
-        //     break;
-        // }
-    }
+void add_seat(int index, int value) { // add value to the room[index]
+    room[index].push_back(value);
+    sort(room[index].begin(), room[index].end());
 }
 
-void removing(int value) {
-    // int value = v * -1;
-    cout << "removing " << value << endl;
-    int room_index = 0;
+void adding_process(int value) {
+    int index = room.size() - 1;
+    while (index >= 0) {
+        if (index == 0) {
+            add_seat(index, value);
+            break;
+        } else if (value > room[index].front()) {
+            add_seat(index, value);
+            break;
+        }
+        index--;
+    }
+
+    if (room[index].size() == 2*k) split(room[index], index);
+}
+
+void removing_process(int value) {
+    int index = 0;
     for (auto& seats : room) {
-        int index = 0;
-        for (auto seat : seats) {
-            if (value == seat) {
-                seats.erase(seats.begin() + index);
-                // seats.shrink_to_fit();
-                if (seats.empty()) {
-                // room.remove(seats);
-                    room.erase(room.begin() + room_index);
-                    return;
-                }
-                return;
-            }
-            index++;
+        if (find(seats.begin(), seats.end(), value) != seats.end()) { // found the value
+            auto p = find(seats.begin(), seats.end(), value);
+            seats.erase(p);
+
+            if (seats.empty()) room.erase(room.begin() + index);
+
+            break;
         }
-        room_index++;
+        index++;
     }
 }
+
+
+
 void output() {
-    cout << "-------------\n";
     for (auto& seats : room) {
-        for (auto& seat : seats) {
-            cout << seat << " ";
-        }
-        cout << endl;
+        cout << seats.front() << endl;
     }
-    cout << "-----------\n";
 }
 
 
 void process() {
-    if (room.empty()) {
-        // seats.push_back(0);
-        room.push_back(seats);
-    }
     for (auto& moving : movings) {
-        // cout << moving << endl;
-        if (moving > 0) adding(moving);
-        else            removing(abs(moving));
-        output();
+        if (moving > 0) adding_process(moving);
+        else            removing_process(abs(moving));
     }
-    
 }
 
 
+void input() {
+    int n;
+    string moving;
+    int seat;
 
+    cin >> n >> k;
+    while (n--) {
+        cin >> moving >> seat;
+        if (moving == "-") seat *= -1;
+        movings.push_back(seat);
+    }
+}
 
 int main() {
     input();
-    // cout << room.size() << endl;
     process();
     output();
     return 0;
