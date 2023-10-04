@@ -22,7 +22,7 @@ int main() {
   for (auto w : {12, 23, 34, 45, 67, 78, 89} )
        s.push( w );
 
-  allout("s[] = ", s ) ;
+  // allout("s[] = ", s ) ;
 
 
   cout << "The stack size is now " << s.size() << endl;
