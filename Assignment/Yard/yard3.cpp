@@ -5,6 +5,8 @@ vector< stack<int> > yard;
 int max_size;
 int top = 0;
 int min_size;
+int max_index = 0;
+int min_index = 0;
 
 void print_yard() {
     // cout << "---------------\n";
@@ -33,36 +35,42 @@ void move(int max_index, int min_index) {
 	yard[max_index].pop();
 	// max_size -= 1;
 	// min_size += 1;
-	max_size = 0;
-	min_size = INT_MAX;
-	for (auto& s : yard) {
-        if (s.size() < min_size) {
-            min_size = s.size();
-			// min_index = index;
-        }
-        if (s.size() > max_size) {
-            max_size = s.size();
-			// top = s.top();
-			// max_index = index;
-        } else if (s.size() == max_size && s.top() > top) {
-			max_size = s.size();
-			// top = s.top();
-			// max_index = index;
-		}
-		// index++;
-    }
+	// max_size = 0;
+	// min_size = 10000;
+	// for (auto& s : yard) {
+    //     if (s.size() < min_size) {
+    //         min_size = s.size();
+	// 		// min_index = index;
+    //     }
+    //     if (s.size() > max_size) {
+    //         max_size = s.size();
+	// 		// top = s.top();
+	// 		// max_index = index;
+    //     } else if (s.size() == max_size && s.top() > top) {
+	// 		max_size = s.size();
+    //     }
+	// 		// top = s.top();
+	// 		// max_index = index;
+		
+	// 	// index++;
+    // }
+    find_min_max();
 }
 
-void process() {
-	max_size = 0;
-	min_size = INT_MAX;
-	int max_index = 0;
-	int min_index = 0;
+void find_min_max() {
+    max_size = 0;
+	min_size = 10000;
+	
 	int index = 0;
     for (auto& s : yard) {
         if (s.size() < min_size) {
             min_size = s.size();
 			min_index = index;
+        }
+
+        if (s.empty()) {
+            index++;
+            continue;
         }
         if (s.size() > max_size) {
             max_size = s.size();
@@ -75,6 +83,36 @@ void process() {
 		}
 		index++;
     }
+}
+
+void process() {
+    find_min_max();
+	// max_size = 0;
+	// min_size = 10000;
+	// int max_index = 0;
+	// int min_index = 0;
+	// int index = 0;
+    // for (auto& s : yard) {
+    //     if (s.size() < min_size) {
+    //         min_size = s.size();
+	// 		min_index = index;
+    //     }
+
+    //     if (s.empty()) {
+    //         index++;
+    //         continue;
+    //     }
+    //     if (s.size() > max_size) {
+    //         max_size = s.size();
+	// 		top = s.top();
+	// 		max_index = index;
+    //     } else if (s.size() == max_size && s.top() > top) {
+	// 		max_size = s.size();
+	// 		top = s.top();
+	// 		max_index = index;
+	// 	}
+	// 	index++;
+    // }
 	// cout << "max_size : " << max_size << " max_top : " << top << " max_index : " << max_index << endl;
 	// cout << "min_size : " << min_size << " min_index : " << min_index << endl; 
 	move(max_index, min_index);
@@ -89,9 +127,6 @@ void input() {
         stack<int> containers;
         cin >> n;
 
-        // if (n == 0) {
-        //     containers.push(0);
-        // }
         while (n--) {
             int container;
             cin >> container;
@@ -103,7 +138,7 @@ void input() {
 
 int main() {
     input();
-
+    // cout << "input end\n";
 	// for (auto& c : yard) {
 	// 	cout << c.size() << endl;
 	// }
@@ -111,7 +146,7 @@ int main() {
 	// while ((max_size - min_size) > 1) {
     // 	process();
 	// }
-
+	// print_yard();
 	do {
 		process();
 	} while ((max_size - min_size) > 1);
