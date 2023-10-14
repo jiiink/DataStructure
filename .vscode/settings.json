@@ -10,6 +10,8 @@
         "array": "cpp",
         "deque": "cpp",
         "__split_buffer": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "__tree": "cpp",
+        "map": "cpp"
     }
 }

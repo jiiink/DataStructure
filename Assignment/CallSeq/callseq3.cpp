@@ -4,7 +4,9 @@ using namespace std;
 
 map<string, vector<string> > funcs;
 stack<string> funcStack;
-
+vector<string> statements;
+int n, k[2];
+// int n;
 
 void printS() {
     auto copy = funcStack;
@@ -24,29 +26,19 @@ void printS() {
 void printQ() {
     for (auto& f : funcs) {
         cout << f.first << " : ";
-        // vector<string> copy = f.second;
-        // while (!copy.empty()) {
-        //     cout << copy.front() << " ";
-        //     copy.pop();
-        // }
-        // cout << endl;
         for (auto& s : f.second) {
             cout << s << " ";
         }
         cout << endl;
-        // cout << key << " : ";
-
     }
     cout << "-------------\n";
 }
 
 void input() {
-    int n, k1, k2;
-    cin >> n >> k1 >> k2;
+    cin >> n >> k[0] >> k[1];
 
     while (n--) {
         vector<string> func;
-        // map<string, queue<string> > func;
         string statement = "";
         string key;
         cin >> key;
@@ -57,59 +49,60 @@ void input() {
         }
         funcs[key] = func;
     }
-
 }
 
-void process(vector<string> q) {
-    // cout << "in process\n";
-    // while (!q.empty()) {
-    //     if (q.front() >= "A" && q.front() <= "Z") {
-    //         funcStack.push(q.front());
-    //         // auto it = funcs.find(q.front());
-    //         process(funcs[q.front()]);
-    //         // for (auto& f : funcs) {
-    //         //     if (f.first == q.front()) {
-    //         //         process(f);
-    //         //     }
-    //         // }
-    //         q.pop();
-    //     } else {
-    //         q.pop();
-    //     }
-    // }
+
+void deadLock(string s) {
+    auto copy = funcStack;
+    while (!copy.empty()) {
+        if (s == copy.top()) {
+            cout << "DEADLOCK\n";
+            exit(0);
+        }
+        copy.pop();
+    }
+}
+
+void process(string key, vector<string> q) {
     for (auto& s : q) {
         if (s >= "A" && s <= "Z") {
+
+            deadLock(s);
+
             funcStack.push(s);
-            // if (funcStack.size() > 100) {
-            //     cout << "DEADLOCK\n";
-            //     return;
-            // }
-            printS();
-            process(funcs[s]);
+            // printS();
+            process(s, funcs[s]);
+        } else {
+            string msg = key + "-" + s;
+            cout << msg << " ";
+            statements.push_back(msg);
         }
     }
     funcStack.pop();
 
-    printS();
-
-    
+    // printS();
 }
 
 void output() {
-
+    cout << endl;
+    for (auto a : k) {
+        if (a >= 0) {
+            cout << statements[a-1] << endl;
+        } else {
+            a = statements.size() + a;
+            cout << statements[a] << endl;
+        }
+    }
 }
 
 
 int main() {
     input();
-    printQ();
+    // printQ();
 
 
     funcStack.push("M");
-    printS();
-    process(funcs["M"]);
-    // funcStack.pop();
-    // printS();
+    process("M", funcs["M"]);
     
     output();
     return 0;
