@@ -3,18 +3,17 @@
 #include <set>
 #include <vector>
 using namespace std;
-
-// vector<int> items;
+// score 91
 set<int> items;
-int N, K;
+int K;
 int total = 0;
 stack<int> shoppingList;
-// int index;
 vector< vector<int> > vs;
 
 vector< stack<int> > completeList;
 
 void input() {
+    int N;
     cin >> N >> K;
     while (N--) {
         int item;
@@ -24,52 +23,31 @@ void input() {
 }
 
 
-
-void printS(stack<int> s) {
-    // cout << "\nprintS\n";
-    auto copy = s;
-    vector<int> v;
-    while (!copy.empty()) {
-        v.push_back(copy.top());
-        copy.pop();
-    }
-
-    for (auto& i : v) {
-        cout << i << " ";
-    }
-    cout << "\n---------------------\n";
-}
-
-
 void totalSum(stack<int> s) {
-    cout << "\ntotalSum : ";
+    // cout << "\ntotalSum : ";
     total = 0;
     auto copy = s;
     while (!copy.empty()) {
         total += copy.top();
         copy.pop();
     }
-    cout << total << endl;
-    // return total;
+    // cout << total << endl;
 }
 
 void process(set<int> items) {
-    cout << "\nprocess\n";
+    // cout << "\nprocess\n";
     for (auto& item : items) {
-        // vector<int> complete;
-        // cout << "copy : \n";
         auto copy = items;
-        // printS(copy);
-
+        
         shoppingList.push(item);
-        printS(shoppingList);
+        // printS(shoppingList);
         totalSum(shoppingList);
         // total += item;
         if (total == K) {
             // shoppingList.push(item);
             completeList.push_back(shoppingList);
             shoppingList.pop();
-            printS(shoppingList);
+            // printS(shoppingList);
         } else if (total < K) {
 
             auto copy_of_copy = copy;
@@ -82,7 +60,7 @@ void process(set<int> items) {
             process(copy);
         } else if (total > K) {
             shoppingList.pop();
-            printS(shoppingList);
+            // printS(shoppingList);
         }
     }
     if (shoppingList.empty()) {
@@ -90,7 +68,7 @@ void process(set<int> items) {
     } else {
         shoppingList.pop();
     }
-    printS(shoppingList);
+    // printS(shoppingList);
 }
 
 
@@ -100,14 +78,10 @@ void output(int index) {
         cout << "0\n";
         return;
     } 
-    for (auto& c : completeList) {
-        printS(c);
-    }
-    // printS(completeList[index]);
+    // for (eteList[index]);
     stack<int> s;
     while (!completeList[index].empty()) {
-        // cout << completeList[index].top() << endl;
-        // completeList[index].pop();
+        // p();
         s.push(completeList[index].top());
         completeList[index].pop();
     }
@@ -154,14 +128,6 @@ void findMaxStack() {
 int main() {
     input();
 
-
-    cout << "\n--------------------\n";
-    for (auto& i : items) {
-        cout << i << " ";
-    }
-    cout << "\n---------------------\n";
-
-    // sort(items);
     process(items);
     findMaxStack();
     // output();
