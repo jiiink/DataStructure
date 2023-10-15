@@ -23,6 +23,7 @@ void input() {
 }
 
 
+
 void totalSum(stack<int> s) {
     // cout << "\ntotalSum : ";
     total = 0;
