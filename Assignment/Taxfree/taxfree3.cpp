@@ -9,7 +9,7 @@ set<int> items;
 int N, K;
 int total = 0;
 stack<int> shoppingList;
-int index;
+// int index;
 vector< vector<int> > vs;
 
 vector< stack<int> > completeList;
@@ -95,8 +95,27 @@ void process(set<int> items) {
 
 
 
-
-// int maxV;
+void output(int index) {
+    if (completeList.empty()) {
+        cout << "0\n";
+        return;
+    } 
+    for (auto& c : completeList) {
+        printS(c);
+    }
+    // printS(completeList[index]);
+    stack<int> s;
+    while (!completeList[index].empty()) {
+        // cout << completeList[index].top() << endl;
+        // completeList[index].pop();
+        s.push(completeList[index].top());
+        completeList[index].pop();
+    }
+    while (!s.empty()) {
+        cout << s.top() << endl;
+        s.pop();
+    }
+}
 
 void findMaxStack() {
     for (auto& c : completeList) {
@@ -109,8 +128,8 @@ void findMaxStack() {
         vs.push_back(v);
     }
 
-    // int max, index;
-    int maxV = 0;
+    int maxV, index;
+    maxV = 0;
     index = 0;
     for (int i=0; i<vs.size(); i++) {
         if (vs[i].front() > maxV) {
@@ -124,20 +143,11 @@ void findMaxStack() {
             }
         }
     }
-    // output(index);
+    output(index);
 }
 
 
-void output() {
-    if (completeList.empty()) {
-        cout << "0\n";
-        return;
-    } 
-    for (auto& c : completeList) {
-        printS(c);
-    }
-    printS(completeList[index]);
-}
+
 
 
 
@@ -153,5 +163,6 @@ int main() {
 
     // sort(items);
     process(items);
-    output();
+    findMaxStack();
+    // output();
 }
