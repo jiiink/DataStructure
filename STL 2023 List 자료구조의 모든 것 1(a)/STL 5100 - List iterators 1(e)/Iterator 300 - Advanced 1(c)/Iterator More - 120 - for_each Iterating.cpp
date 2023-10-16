@@ -19,5 +19,4 @@ int main() {
     // print all elements in reverse order
     for_each ( myl.rbegin(), myl.rend(), print);
 
-
 }

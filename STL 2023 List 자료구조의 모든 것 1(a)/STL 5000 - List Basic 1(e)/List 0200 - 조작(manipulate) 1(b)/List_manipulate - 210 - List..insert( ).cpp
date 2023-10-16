@@ -20,4 +20,12 @@ int main() {
     it3-- ;
     outlist("3. la<>= ", la) ;
     cout << "\n it2의 값을 출력해보자 *it3 =  " << *it3 ;
+
+    {
+    list<int> a = {1, 2, 3, 4, 5, 6};
+    list<int>::iterator it;
+    advance(it, 5);
+    a.insert(it, 99);
+    outlist("a = ", a);
+    }
 }
