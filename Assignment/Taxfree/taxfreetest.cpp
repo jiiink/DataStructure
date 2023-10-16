@@ -4,15 +4,13 @@
 #include <vector>
 using namespace std;
 // score 91
-// score 2?
-
 set<int> items;
 int K;
 int total = 0;
 stack<int> shoppingList;
+vector< vector<int> > vs;
+
 vector< stack<int> > completeList;
-vector< vector<int> > completeVector;
-int maxIndex = 0;
 
 void input() {
     int N;
@@ -26,29 +24,36 @@ void input() {
 
 
 
-void totalSum(stack<int> items) {
+void totalSum(stack<int> s) {
+    // cout << "\ntotalSum : ";
     total = 0;
-    auto temp = items;
-    while (!temp.empty()) {
-        total += temp.top();
-        temp.pop();
+    auto copy = s;
+    while (!copy.empty()) {
+        total += copy.top();
+        copy.pop();
     }
+    // cout << total << endl;
 }
 
 void process(set<int> items) {
+    // cout << "\nprocess\n";
     for (auto& item : items) {
         auto copy = items;
         
         shoppingList.push(item);
+        // printS(shoppingList);
         totalSum(shoppingList);
-
+        // total += item;
         if (total == K) {
+            // shoppingList.push(item);
             completeList.push_back(shoppingList);
             shoppingList.pop();
+            // printS(shoppingList);
         } else if (total < K) {
+
             auto copy_of_copy = copy;
             for (auto& i : copy_of_copy) {
-                if (i < item) {
+                if (i <= item) {
                     copy.erase(i);
                 }
             }
@@ -95,24 +100,22 @@ void findMaxStack() {
             v.push_back(copy.top());
             copy.pop();
         }
-        completeVector.push_back(v);
+        vs.push_back(v);
     }
 
-
-    int maxV = 0;
-    for (int i=0; i<completeVector.size(); i++) {
-        if (completeVector[i].front() > maxV) {
-            maxV = completeVector[i].front();
-            maxIndex = i;
-        } else if (completeVector[i].front() == maxV) {
-            if (completeVector[maxIndex][completeVector[maxIndex].size()-2] > completeVector[i][completeVector[i].size()-2]) {
-                maxIndex = maxIndex;
-            } else {
-                maxIndex = i;
-            }
+    int maxV, index;
+    maxV = 0;
+    index = 0;
+    for (int i=0; i<vs.size(); i++) {
+        if (vs[i].front() > maxV) {
+            maxV = vs[i].front();
+            index = i;
+        } else if (vs[i].front() == maxV) {
+            if (vs[index][vs[index].size()-2] < vs[i][vs[i].size()-2]) index = i;
+                
         }
     }
-    // output(index);
+    output(index);
 }
 
 
@@ -125,5 +128,5 @@ int main() {
 
     process(items);
     findMaxStack();
-    output(maxIndex);
+    // output();
 }
