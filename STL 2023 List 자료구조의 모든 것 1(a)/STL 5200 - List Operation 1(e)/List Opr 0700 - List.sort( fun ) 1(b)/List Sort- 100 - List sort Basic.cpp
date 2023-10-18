@@ -13,7 +13,8 @@ int main() {
   myout("my[] After :", my) ;
   // sort( my.begin(), my.end()) ;  List는 algorithm/sort를 사용하면 안된다. List.sort( )
   // 만능 sort( )는 container가 기본적으로 random access[] 구조를 가정.
-  sort( py.begin(), py.end() ) ;
+  // sort( my.begin(), my.end() ) ; // error
+  sort(py.begin(), py.end());
   myout("py[] After :", py) ;
 
   sort( dy.begin(), dy.end() ) ;

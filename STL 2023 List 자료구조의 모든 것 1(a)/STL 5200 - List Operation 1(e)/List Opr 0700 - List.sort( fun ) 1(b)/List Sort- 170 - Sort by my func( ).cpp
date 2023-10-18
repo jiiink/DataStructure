@@ -22,11 +22,19 @@ bool compare_last (const string& first, const string& second) {
     return ( first.back() < second.back() );
 } // end
 
+bool compare_70(int a, int b) {
+    return abs(70 - a) < abs(70 - b);
+}
+
 
 int main () {
     list<string> mylist {"Tomato","Beer","banana","Orange", "Mango","grape","Plum","Jamong" };
+    list<int> Ascore = {67, 45, 34, 89, 87, 13, 67, 99, 64, 100, 97};
     list<string>::iterator it;
 
+    myout("before = ", Ascore);
+    Ascore.sort(compare_70);
+    myout("after = ", Ascore);
 
     myout("√ ±‚ mylist[]= ", mylist ) ;
     mylist.sort();
