@@ -135,7 +135,7 @@ int main() {
     cout << "\n\n 추가 node insert 후 " ;
 	cout << "\n Tree의 Depth= " << Tdepth(root) ;
 	cout << "\n Tree의 Leaf 수=  " << Tleaf(root) ;
-	cout << "\n Tree의 노드 수=  "   << Tsize(root) ;
+	cout << "\n Tree의 nodes=  "   << Tsize(root) ;
 	cout << "\n Tree의 Right subtree의 크기=  "   << Tsize(root->right) ;
 	return 0;
 }
