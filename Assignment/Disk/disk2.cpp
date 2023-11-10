@@ -12,7 +12,6 @@ struct File {
 
 list<File> storage;
 int volume;
-// list<File>::iterator it = storage.begin();
 string output = "";
 
 
@@ -22,8 +21,36 @@ void printDisk() {
     }
     cout << endl;
 }
+bool isExist(File f) {
+    for (auto node : storage) {
+        if (node.name == f.name) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void generalCompact() {
+    auto behind = storage.begin();
+    auto current = storage.begin();
+    advance(current, 1);
+    while (current != storage.end()) {
+        if ((*current).name == (*behind).name) {
+            (*current).size += (*behind).size;
+            behind = storage.erase(behind);
+            advance(current, 1);
+        } else {
+            advance(behind, 1);
+            advance(current, 1);    
+        } 
+    }
+}
 
 void writeFile(File f, list<File>::iterator it) {
+    if (isExist(f)) {
+        output += "error\n";
+        return;
+    }
     int empty_size = 0;
     for (auto node : storage) {
         if (node.name == "free") {
@@ -57,15 +84,7 @@ void writeFile(File f, list<File>::iterator it) {
         }
     }
 }
-bool isExist(File f) {
-    // return find(storage.begin(), storage.end(), f) != storage.end();
-    for (auto node : storage) {
-        if (node.name == f.name) {
-            return true;
-        }
-    }
-    return false;
-}
+
 void deleteFile(File f) {
     if (!isExist(f)) {
         // cout << "\nerror\n";
@@ -77,6 +96,7 @@ void deleteFile(File f) {
             node.name = "free";
         }
     }
+    generalCompact();
 }
 
 
@@ -85,11 +105,7 @@ void show(File f) {
         // cout << "error\n";
         output += "error\n";
         return;
-    } 
-    // for (auto node : storage) {
-    //     if (node.name == f.name)
-    // }
-    else {
+    } else {
         int position = 0;
         for (auto& node : storage) {
             if (node.name == f.name) {
@@ -107,32 +123,20 @@ bool isFree(File node) {
     return node.name == "free";
 }
 
+
+
 void compact() {
     int empty_size = 0;
-    // auto it = storage.begin();
+
     for (auto& node : storage) {
         if (node.name == "free") {
             empty_size += node.size;
-            // storage.erase(it);
         }
     }
     storage.remove_if(isFree);
     storage.emplace_back("free", empty_size);
     
-    auto behind = storage.begin();
-    auto current = storage.begin();
-    advance(current, 1);
-    while (current != storage.end()) {
-        if ((*current).name == (*behind).name) {
-            (*current).size += (*behind).size;
-            behind = storage.erase(behind);
-            advance(current, 1);
-        } else {
-            advance(behind, 1);
-            advance(current, 1);    
-        }
-        
-    }
+    generalCompact();
 }
 
 
@@ -140,9 +144,8 @@ void compact() {
 void input() {
     cin >> volume;
     storage.emplace_back("free", volume);
-    // printDisk();
+    printDisk();
     auto it = storage.begin();
-    // string command = "";
     
     string operation = "";
     string fileName = "";
@@ -169,7 +172,7 @@ void input() {
         } else if (operation == "end") { 
             break;
         }
-        // printDisk();
+        printDisk();
     }
 }
 
