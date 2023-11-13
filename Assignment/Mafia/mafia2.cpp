@@ -11,9 +11,10 @@ class Member {
         string name, boss;
         int rank;
         // vector<string> servants;
-        int totalServantCounts;
+        int totalServantCounts = 0;
     public:
-        Member(string name) : name(name) {}
+        Member(string name, string boss) : name(name), boss(boss) {}
+
         void setCounts(int counts) {
             totalServantCounts = counts;
         }
@@ -25,6 +26,7 @@ class Member {
 
 unordered_map<string, vector<string>> mafia;
 vector<string> people;
+vector<Member> ranking;
 // map<Member, vector<string>> mafia;
 
 void printMafia() {
@@ -48,6 +50,7 @@ void input() {
         cin >> person >> boss;
         mafia[boss].push_back(person);
         people.push_back(person);
+        ranking.emplace_back(person, boss);
     }
 
 
@@ -58,6 +61,9 @@ void input() {
         if (it == people.end()) {
             // cout << "in if\n";
             people.push_back(person.first);
+            Member root(person.first, "");
+            root.rank = 0;
+            ranking.push_back(root);
         }
     }
     cout << endl;
@@ -90,7 +96,12 @@ void search(unordered_map<string, vector<string>>::iterator member) {
     int rank = 0;
 }
 
-vector<Member> ranking;
+int getRank(Member person) {
+    int rank = 0;
+    while (person.boss == "") {
+        
+    }
+}
 
 int main() {
     input();
@@ -103,22 +114,37 @@ int main() {
 
     
 
-    for (auto person : people) {
-        Member member(person);
-        cout << person << " : ";
-        auto it = mafia.find(person);
-        if (it != mafia.end()) { // person is in the mafiaMap
+    // for (auto person : people) {
+    //     // Member member(person);
+    //     cout << person << " : ";
+    //     auto it = mafia.find(person);
+    //     if (it != mafia.end()) { // person is in the mafiaMap
+    //         int counts = getServantCounts(it);
+    //         member.setCounts(counts);
+    //         cout << counts << endl;
+    //     } else {
+    //         cout << "0\n";
+    //     }
+    //     ranking.push_back(member);
+    // }
+    for (auto person : ranking) {
+        cout << person.name << " : ";
+        auto it = mafia.find(person.name);
+        if (it != mafia.end()) {
             int counts = getServantCounts(it);
-            member.setCounts(counts);
-            cout << counts << endl;
+            person.setCounts(counts);
+            cout << counts << endl; 
         } else {
             cout << "0\n";
         }
-        ranking.push_back(member);
     }
 
     sort(ranking.begin(), ranking.end(), mysort); // root is in first
 
+
+    // for (auto& member : ranking) {
+    //     getRank(member);
+    // }
 
     
 
