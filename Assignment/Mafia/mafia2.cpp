@@ -6,16 +6,24 @@ using namespace std;
 //     map<Member, vector<Member>> mafia;
 // };
 
-// class Member {
-//     private:
-//         string name, boss;
-//         vector<string> servants;
-//         int totalServantCounts;
-//     public:
-//         Member(string name, string boss) : name(name), boss(boss) {}
-// };
+class Member {
+    public:
+        string name, boss;
+        int rank;
+        // vector<string> servants;
+        int totalServantCounts;
+    public:
+        Member(string name) : name(name) {}
+        void setCounts(int counts) {
+            totalServantCounts = counts;
+        }
 
-map<string, vector<string>> mafia;
+        int getCounts() {
+            return totalServantCounts;
+        }
+};
+
+unordered_map<string, vector<string>> mafia;
 vector<string> people;
 // map<Member, vector<string>> mafia;
 
@@ -57,7 +65,7 @@ void input() {
 }
 
 
-int getServantCounts(map<string, vector<string>>::iterator member) {
+int getServantCounts(unordered_map<string, vector<string>>::iterator member) {
     int servantCounts = member->second.size();
     for (auto& servant : member->second) {
         auto it = mafia.find(servant);
@@ -69,6 +77,21 @@ int getServantCounts(map<string, vector<string>>::iterator member) {
 }
 
 
+
+bool mysort(Member a, Member b) {
+    if (a.totalServantCounts == b.totalServantCounts) {
+
+    }
+    return a.getCounts() > b.getCounts();
+}
+
+
+void search(unordered_map<string, vector<string>>::iterator member) {
+    int rank = 0;
+}
+
+vector<Member> ranking;
+
 int main() {
     input();
     allout(people);
@@ -78,17 +101,32 @@ int main() {
     //     cout << it->first << " : " << getServantCounts(it) << endl;
     // }
 
+    
+
     for (auto person : people) {
+        Member member(person);
         cout << person << " : ";
         auto it = mafia.find(person);
         if (it != mafia.end()) { // person is in the mafiaMap
-            cout << getServantCounts(it) << endl;
+            int counts = getServantCounts(it);
+            member.setCounts(counts);
+            cout << counts << endl;
         } else {
             cout << "0\n";
         }
+        ranking.push_back(member);
     }
 
+    sort(ranking.begin(), ranking.end(), mysort); // root is in first
 
+
+    
+
+
+    for (auto i : ranking) {
+        cout << i.name << " "; 
+    }
+    cout <<endl;
 
     return 0;
 }

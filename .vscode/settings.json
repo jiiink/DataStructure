@@ -12,6 +12,7 @@
         "__split_buffer": "cpp",
         "list": "cpp",
         "__tree": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "__bit_reference": "cpp"
     }
 }
