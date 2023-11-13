@@ -1,9 +1,10 @@
-// Open source tree.hh ¸¦ ÀÌ¿ëÇÑ Tree ¸¸µé±â
+// Open source tree.hh ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ Tree ï¿½ï¿½ï¿½ï¿½ï¿½
 
 #include <iostream>
-#include "tree_new.hh"    // ÀÌ°É ³Ö¾î¾ß ÇÕ´Ï´Ù. ¿©·¯ºÐµéµµ ³ªÁß¿¡ ÀÌ·¸°Ô ¸¸µå¼¼¿ä.
+#include "tree_new.hh"    // ï¿½Ì°ï¿½ ï¿½Ö¾ï¿½ï¿½ ï¿½Õ´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Ðµéµµ ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½å¼¼ï¿½ï¿½.
 #include "tree_util.hh"
 using namespace std ;
+
 
 
 
@@ -27,7 +28,7 @@ int main(int, char **) {
 
 	kptree::print_tree_bracketed(tr, cout);
 
-	// Q, ÀÌ ±¸Á¶ tr¿¡¼­ ¸ðµç leaf node¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö show_all_leaf( T ) ¸¦ ¸¸µé¾î º¾½Ã´Ù.
+	// Q, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ trï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ leaf nodeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ show_all_leaf( T ) ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã´ï¿½.
 
 
 } // end of main()
