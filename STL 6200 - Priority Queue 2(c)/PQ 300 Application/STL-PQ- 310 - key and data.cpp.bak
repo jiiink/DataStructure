@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct DATA {
+    string key;
+    int data;
+};
+
+ bool operator<(const DATA &d1, const DATA & d2){return d1.key > d2.key ;}
+// bool operator<(const DATA &d1, const DATA & d2){return true ;}
+
+int main() {
+    priority_queue<DATA> PQ;
+
+    DATA newItem;
+    newItem.key = "Apples";  newItem.data = 61;  PQ.push(newItem);
+    newItem.key = "Orange";  newItem.data = 13;  PQ.push(newItem);
+    newItem.key = "Banana";  newItem.data = 37;  PQ.push(newItem);
+    newItem.key = "Sprite" ; newItem.data = 43;  PQ.push(newItem);
+    newItem.key = "Pear"  ;  newItem.data =  8;  PQ.push(newItem);
+    newItem.key = "Soju";    newItem.data = 22;  PQ.push(newItem);
+    newItem.key = "Terra";   newItem.data = 67;  PQ.push(newItem);
+    newItem.key = "Water"  ; newItem.data = 50;  PQ.push(newItem);
+
+
+    while (!PQ.empty()) {
+        cout << " 먼저 나온 PQ.top().key = " << PQ.top().key << endl;
+        PQ.pop();
+  } // end of while ( )
+
+    return 0;
+}

@@ -1,0 +1,135 @@
+graph:
+undirected
+label G1
+font Arial 1 24
+begin vertices:
+vertex 0:
+label 0
+location 369.0,217.0
+color 0
+labellocation 0.0 4.0
+vertex 1:
+label 1
+location 452.0,335.0
+color 0
+labellocation 0.0 4.0
+vertex 2:
+label 2
+location 168.0,302.0
+color 0
+labellocation 0.0 4.0
+vertex 3:
+label 3
+location 224.0,494.0
+color 0
+labellocation 0.0 4.0
+vertex 4:
+label 4
+location 436.0,43.0
+color 0
+labellocation 0.0 4.0
+vertex 5:
+label 5
+location 681.0,168.0
+color 0
+labellocation 0.0 4.0
+vertex 6:
+label 6
+location 669.0,436.0
+color 0
+labellocation 0.0 4.0
+vertex 7:
+label 7
+location 436.0,537.0
+color 0
+labellocation 0.0 4.0
+vertex 8:
+label 8
+location 303.0,329.0
+color 0
+labellocation 0.0 4.0
+vertex 9:
+label 9
+location 535.0,224.0
+color 0
+labellocation 0.0 4.0
+vertex 10:
+label 10
+location 271.0,82.0
+color 0
+labellocation 0.0 4.0
+vertex 11:
+label 11
+location 264.0,177.0
+color 0
+labellocation 0.0 4.0
+vertex 12:
+label 12
+location 96.0,164.0
+color 0
+labellocation 0.0 4.0
+begin edges
+2 -> 0
+label 20
+color 0
+weight 1
+0 -> 4
+label 04
+color 0
+weight 1
+8 -> 0
+label 80
+color 0
+weight 1
+0 -> 9
+label 09
+color 0
+weight 1
+1 -> 6
+label 16
+color 0
+weight 1
+1 -> 7
+label 17
+color 0
+weight 1
+1 -> 9
+label 19
+color 0
+weight 1
+2 -> 3
+label 23
+color 0
+weight 1
+12 -> 2
+label 122
+color 0
+weight 1
+3 -> 7
+label 37
+color 0
+weight 1
+4 -> 5
+label 45
+color 0
+weight 1
+4 -> 10
+label 410
+color 0
+weight 1
+5 -> 6
+label 56
+color 0
+weight 1
+8 -> 7
+label 87
+color 0
+weight 1
+10 -> 12
+label 1012
+color 0
+weight 1
+11 -> 10
+label 1110
+color 0
+weight 1

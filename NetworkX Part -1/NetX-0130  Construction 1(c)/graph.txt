@@ -1,0 +1,9 @@
+a b 34
+c d 22
+a e 13
+a f 33
+g f  8
+e f 11
+b e 40
+b c 19
+b g  6

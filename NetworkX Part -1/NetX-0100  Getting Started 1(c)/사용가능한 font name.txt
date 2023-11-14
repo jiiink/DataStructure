@@ -1,0 +1,1367 @@
+['DejaVu Serif',
+ 'STIXSizeTwoSym',
+ 'STIXSizeFiveSym',
+ 'cmsy10',
+ 'STIXNonUnicode',
+ 'DejaVu Sans Mono',
+ 'DejaVu Serif Display',
+ 'STIXSizeFourSym',
+ 'DejaVu Sans',
+ 'DejaVu Sans',
+ 'STIXSizeOneSym',
+ 'STIXGeneral',
+ 'STIXSizeThreeSym',
+ 'cmtt10',
+ 'STIXSizeThreeSym',
+ 'STIXNonUnicode',
+ 'STIXSizeFourSym',
+ 'cmss10',
+ 'DejaVu Serif',
+ 'cmb10',
+ 'cmex10',
+ 'cmr10',
+ 'STIXSizeOneSym',
+ 'DejaVu Sans Mono',
+ 'cmmi10',
+ 'STIXGeneral',
+ 'DejaVu Sans Display',
+ 'DejaVu Sans',
+ 'STIXNonUnicode',
+ 'DejaVu Sans Mono',
+ 'DejaVu Serif',
+ 'STIXGeneral',
+ 'DejaVu Sans',
+ 'STIXGeneral',
+ 'STIXNonUnicode',
+ 'STIXSizeTwoSym',
+ 'DejaVu Sans Mono',
+ 'DejaVu Serif',
+ 'JasmineUPC',
+ 'MSugiJeong',
+ 'Stencil BT',
+ 'Bell MT',
+ 'Haan YGodic 240',
+ 'Trebuchet MS',
+ 'NanumBarunGothic',
+ 'Haan Sollip B',
+ 'Haan YGodic 250',
+ 'Haan YGodic 230',
+ 'Lucida Handwriting',
+ 'Wide Latin',
+ 'MingLiU-ExtB',
+ 'Kalinga',
+ 'Stencil',
+ 'LilyUPC',
+ 'HYhaeseo',
+ 'Broadway',
+ 'Haan Baekje B',
+ 'MDGaesung',
+ 'HYdnkM',
+ 'Aparajita',
+ 'AmeriGarmnd BT',
+ 'Vijaya',
+ 'Haan Somang M',
+ 'IrisUPC',
+ 'Book Antiqua',
+ 'OCR A Extended',
+ 'Pristina',
+ 'Utsaah',
+ 'CentSchbook BT',
+ 'Levenim MT',
+ 'HYMyeongJo-Extra',
+ 'Microsoft Uighur',
+ 'Playbill',
+ 'Calibri',
+ 'David',
+ 'Constantia',
+ 'Goudy Old Style',
+ 'NanumBarunGothic',
+ 'Century Gothic',
+ '? ??',
+ 'Corbel',
+ 'Rockwell',
+ 'Calibri',
+ 'Verdana',
+ 'Lucida Bright',
+ 'MS Reference Specialty',
+ 'DomCasual BT',
+ 'Kokila',
+ 'Lucida Fax',
+ 'Microsoft JhengHei',
+ 'HYGungSo-Bold',
+ 'HCR Dotum Ext',
+ 'Lucida Bright',
+ 'HYnamL',
+ 'Bodoni Bk BT',
+ 'Bradley Hand ITC',
+ 'Felix Titling',
+ 'Century Schoolbook',
+ 'Aparajita',
+ 'Orbit-B BT',
+ 'Gill Sans Ultra Bold',
+ 'Gill Sans MT',
+ 'HYsupM',
+ '??????',
+ 'HYGothic-Medium',
+ 'Goudy Old Style',
+ 'CentSchbook BT',
+ 'AmeriGarmnd BT',
+ 'Kalinga',
+ 'Pyunji R',
+ 'HYbsrB',
+ 'Engravers MT',
+ 'Arial',
+ 'Gisha',
+ 'CommercialScript BT',
+ 'Palatino Linotype',
+ 'NanumGothic',
+ 'Calibri',
+ 'BrowalliaUPC',
+ 'Bell MT',
+ 'Haan YHead M',
+ 'NanumSquare',
+ 'Gulim',
+ 'SimSun-ExtB',
+ 'Copperplate Gothic Light',
+ 'Rockwell Extra Bold',
+ 'KBIZmjo M',
+ 'Rage Italic',
+ 'Browallia New',
+ 'Berlin Sans FB',
+ 'HCR Dotum',
+ 'Blackadder ITC',
+ 'Wingdings',
+ 'Rockwell Condensed',
+ 'CordiaUPC',
+ 'Calibri',
+ 'HYcysM',
+ 'Kokila',
+ 'Franklin Gothic Medium',
+ 'Courier New',
+ 'Agency FB',
+ 'Bodoni MT',
+ 'Bookman Old Style',
+ 'Segoe Print',
+ 'Courier New',
+ 'Bookman Old Style',
+ 'GoudyOlSt BT',
+ 'Lucida Sans',
+ 'Freehand591 BT',
+ 'Times New Roman',
+ 'Bodoni MT',
+ 'ahn2006-M',
+ 'Brush Script MT',
+ 'Harrington',
+ 'Angsana New',
+ 'KodchiangUPC',
+ 'Franklin Gothic Heavy',
+ 'Courier10 BT',
+ 'HYbdaM',
+ 'Haan Baekje M',
+ 'Eras Demi ITC',
+ 'Yj BACDOO Bold ',
+ 'Arial Rounded MT Bold',
+ 'Kartika',
+ 'Microsoft PhagsPa',
+ 'DilleniaUPC',
+ 'Lucida Calligraphy',
+ 'MS Outlook',
+ 'GoudyOlSt BT',
+ 'Courier New',
+ 'Segoe Print',
+ 'Simplified Arabic',
+ 'High Tower Text',
+ 'MDAlong',
+ 'HYgtrE',
+ 'JasmineUPC',
+ 'Gill Sans MT',
+ 'Traditional Arabic',
+ 'Webdings',
+ 'Wingdings 2',
+ 'Tw Cen MT',
+ 'Tahoma',
+ 'Yj INITIALPOSITIVE Medium',
+ 'Newtext Bk BT',
+ 'Times New Roman',
+ 'Yj SHANALL Medium ',
+ 'Iskoola Pota',
+ 'Castellar',
+ 'HCR Batang ExtB',
+ 'Bodoni MT',
+ 'NanumMyeongjo',
+ 'NanumMyeongjo',
+ 'Perpetua',
+ 'Consolas',
+ 'HYHeadLine-Medium',
+ 'Script MT Bold',
+ 'Lucida Sans Typewriter',
+ 'Trebuchet MS',
+ 'Arial',
+ 'Constantia',
+ '??????',
+ 'Microsoft Tai Le',
+ 'Garamond',
+ 'Tw Cen MT',
+ 'Candara',
+ 'FreesiaUPC',
+ 'Eras Medium ITC',
+ 'Vivaldi',
+ 'Segoe Script',
+ 'Bodoni MT',
+ 'Utsaah',
+ 'Shruti',
+ 'Kokila',
+ 'Ebrima',
+ 'Hancom Gothic',
+ 'HYtbrB',
+ 'Arial',
+ 'Imprint MT Shadow',
+ 'Lucida Sans',
+ 'Tw Cen MT',
+ 'Arial Unicode MS',
+ 'Aparajita',
+ 'Microsoft New Tai Lue',
+ 'MoolBoran',
+ 'HYShortSamul-Medium',
+ 'Raavi',
+ 'Eras Bold ITC',
+ 'Constantia',
+ 'GoudyOlSt BT',
+ 'Microsoft JhengHei',
+ 'EucrosiaUPC',
+ 'EucrosiaUPC',
+ 'HCR Batang',
+ 'HYgsrB',
+ 'Verdana',
+ 'Han Santteut Dotum',
+ 'Ravie',
+ 'Nirmala UI',
+ 'DaunPenh',
+ 'Arial',
+ 'Lao UI',
+ 'FreesiaUPC',
+ 'CordiaUPC',
+ 'MDEasop',
+ 'Helvetica Black',
+ 'Monotype Corsiva',
+ 'Segoe UI',
+ 'YJ INJANG Medium',
+ 'Californian FB',
+ 'Yj SOSEL SemiBold',
+ 'Comic Sans MS',
+ 'Cambria',
+ 'Bodoni MT',
+ 'Chiller',
+ 'BroadwayEngraved BT',
+ 'Jokerman',
+ 'Meiryo',
+ 'Californian FB',
+ 'Bodoni Bk BT',
+ 'Bodoni MT',
+ 'HYkanB',
+ 'Californian FB',
+ 'Khmer UI',
+ 'Modern No. 20',
+ 'Helvetica .Black',
+ 'Verdana',
+ 'KBIZgo M',
+ 'Goudy Stout',
+ 'Yj WADAG Medium',
+ 'Kristen ITC',
+ 'Haan Sollip M',
+ 'Aharoni',
+ 'KBIZmjo R',
+ 'NanumBarunpen',
+ 'Perpetua',
+ 'Batang',
+ 'HYkanM',
+ 'Showcard Gothic',
+ 'HancomEQN',
+ 'IrisUPC',
+ 'Angsana New',
+ 'Berlin Sans FB Demi',
+ 'Microsoft Uighur',
+ 'Consolas',
+ 'Yj DOOLGI Medium',
+ 'Lucida Bright',
+ 'NanumSquare',
+ 'Haan Somang B',
+ 'Ebrima',
+ 'Gabriola',
+ 'MurrayHill Bd BT',
+ 'MGungHeulim',
+ 'Kartika',
+ 'Agency FB',
+ 'Franklin Gothic Medium Cond',
+ 'Segoe UI',
+ 'Onyx',
+ 'Cooper Blk BT',
+ 'Rockwell',
+ 'Utsaah',
+ 'NanumBarunGothic',
+ 'HYnamB',
+ 'HYPost-Light',
+ 'Informal Roman',
+ 'IrisUPC',
+ 'MBatang',
+ 'Bodoni MT',
+ 'Tahoma',
+ 'Cambria',
+ 'KodchiangUPC',
+ 'Meiryo',
+ 'Yj BONMOKGAK Medium ',
+ 'NanumGothic',
+ 'Nirmala UI',
+ 'OCR-B-10 BT',
+ 'Franklin Gothic Demi',
+ '????',
+ 'Maiandra GD',
+ 'Segoe UI',
+ 'Calibri',
+ 'Magic R',
+ 'Microsoft YaHei',
+ 'MingLiU',
+ 'NanumGothic',
+ 'BrowalliaUPC',
+ 'Bodoni Bd BT',
+ 'Nyala',
+ '??????',
+ 'AmeriGarmnd BT',
+ 'Malgun Gothic',
+ 'Franklin Gothic Medium',
+ 'Elephant',
+ '???',
+ 'DokChampa',
+ 'Iskoola Pota',
+ 'Microsoft PhagsPa',
+ 'AngsanaUPC',
+ 'Courier10 BT',
+ 'Georgia',
+ 'Yj DWMMOOGJO',
+ 'Orator10 BT',
+ 'Microsoft JhengHei',
+ 'Lucida Fax',
+ 'NanumSquare',
+ 'Franklin Gothic Heavy',
+ '????',
+ 'ParkAvenue BT',
+ 'AngsanaUPC',
+ 'NanumMyeongjo',
+ 'Matura MT Script Capitals',
+ 'Consolas',
+ 'Tw Cen MT Condensed Extra Bold',
+ 'Miriam',
+ 'DilleniaUPC',
+ 'Gill Sans Ultra Bold Condensed',
+ 'Century Gothic',
+ 'Rod',
+ 'BernhardFashion BT',
+ 'Vrinda',
+ 'HYsupB',
+ 'Algerian',
+ 'Segoe UI',
+ 'SimHei',
+ 'Microsoft YaHei',
+ 'Copperplate Gothic Bold',
+ 'Microsoft New Tai Lue',
+ 'Centaur',
+ 'Miriam Fixed',
+ 'Magneto',
+ 'MDArt',
+ 'Segoe UI',
+ 'FrankRuehl',
+ '????',
+ 'MV Boli',
+ 'NanumSquareOTF',
+ 'Century Schoolbook',
+ 'MGungJeong',
+ 'Cooper Black',
+ 'Vijaya',
+ 'BrowalliaUPC',
+ 'Symbol',
+ 'Poor Richard',
+ 'MHunmin',
+ 'Bodoni MT',
+ 'Gill Sans MT',
+ 'Century Schoolbook',
+ 'Sakkal Majalla',
+ 'Haan YHead L',
+ 'MS Mincho',
+ 'Franklin Gothic Demi Cond',
+ 'Nanum Brush Script',
+ 'HYmprL',
+ 'Lucida Sans',
+ 'Utsaah',
+ 'MDotum',
+ 'Cordia New',
+ 'FreesiaUPC',
+ 'Haansoft Batang',
+ 'JasmineUPC',
+ 'Simplified Arabic',
+ 'Verdana',
+ 'Bernard MT Condensed',
+ 'Estrangelo Edessa',
+ 'FZSong_Superfont',
+ 'Impact',
+ 'KBIZmjo B',
+ 'Leelawadee',
+ 'HYwulM',
+ 'Browallia New',
+ 'Yj GABI',
+ 'Haan Wing2',
+ 'Mistral',
+ 'Plantagenet Cherokee',
+ 'Bookman Old Style',
+ 'HYbdaL',
+ 'Gill Sans MT Ext Condensed Bold',
+ 'Perpetua Titling MT',
+ 'Times New Roman',
+ 'Mangal',
+ 'Book Antiqua',
+ 'Franklin Gothic Book',
+ '??????',
+ 'Lao UI',
+ 'Bell MT',
+ 'Vrinda',
+ 'French Script MT',
+ 'Bodoni MT',
+ 'Garamond',
+ 'NewJumja',
+ 'Angsana New',
+ 'Malgun Gothic',
+ 'Segoe UI',
+ 'Georgia',
+ 'Harlow Solid Italic',
+ 'Yj BLOCK Medium',
+ 'Swis721 BT',
+ 'Sylfaen',
+ 'HYGothic-Extra',
+ 'Microsoft Yi Baiti',
+ 'Freestyle Script',
+ 'Ami R',
+ 'Haan Sale M',
+ 'Han Santteut Dotum',
+ 'Swis721 BT',
+ 'Kunstler Script',
+ 'Lucida Sans Unicode',
+ 'Goudy Old Style',
+ 'Microsoft Tai Le',
+ 'Corbel',
+ 'Palatino Linotype',
+ 'HCR Dotum',
+ 'Baskerville Old Face',
+ 'MSugiHeulim',
+ 'Gigi',
+ 'MJemokGothic',
+ 'Niagara Engraved',
+ 'OCR-A BT',
+ 'Arial',
+ 'Cambria',
+ 'Mongolian Baiti',
+ 'Georgia',
+ 'Constantia',
+ 'Levenim MT',
+ 'Hobo BT',
+ 'Garamond',
+ 'Rockwell Condensed',
+ 'HYGraphic-Medium',
+ 'HCR Batang Ext',
+ 'Comic Sans MS',
+ 'Microsoft YaHei',
+ 'Palatino Linotype',
+ 'MDSol',
+ 'CentSchbook BT',
+ 'ahn2006-B',
+ 'HYnamM',
+ 'Segoe UI Emoji',
+ 'Rockwell',
+ 'Haan Sale B',
+ 'Curlz MT',
+ 'HYwulB',
+ 'Calibri',
+ 'AngsanaUPC',
+ 'Forte',
+ 'BrowalliaUPC',
+ 'Haan Cooljazz M',
+ 'Euphemia',
+ 'Lucida Bright',
+ 'Century Gothic',
+ 'Haan Cooljazz L',
+ 'Khmer UI',
+ 'Candara',
+ 'Georgia',
+ 'Gisha',
+ 'NanumBarunGothic',
+ 'Snap ITC',
+ 'Haettenschweiler',
+ 'Angsana New',
+ 'NanumSquareOTF',
+ 'CordiaUPC',
+ 'Candara',
+ 'Lucida Sans',
+ 'Microsoft Himalaya',
+ 'Latha',
+ 'YJ BELLA Medium',
+ 'Andalus',
+ 'Microsoft Sans Serif',
+ 'HYPMokGak-Bold',
+ 'Baskerville BT',
+ 'NanumMyeongjo',
+ 'Lucida Sans Typewriter',
+ 'Mangal',
+ 'DFKai-SB',
+ 'Arabic Typesetting',
+ 'Parchment',
+ 'Juice ITC',
+ 'IrisUPC',
+ 'Bauhaus 93',
+ 'DilleniaUPC',
+ 'Arial',
+ 'NanumSquareOTF',
+ 'Microsoft JhengHei',
+ 'Shonar Bangla',
+ '??????',
+ 'Palace Script MT',
+ 'Old English Text MT',
+ 'Lucida Fax',
+ 'Elephant',
+ 'Gautami',
+ 'New Gulim',
+ 'Vani',
+ 'Bookman Old Style',
+ 'HYSinMyeongJo-Medium',
+ 'Cordia New',
+ 'David',
+ 'Trebuchet MS',
+ 'Candara',
+ 'Berlin Sans FB',
+ 'Vani',
+ 'Tunga',
+ 'LilyUPC',
+ 'Perpetua',
+ 'Tw Cen MT Condensed',
+ 'KodchiangUPC',
+ 'Tw Cen MT',
+ 'NanumSquare',
+ 'Bookshelf Symbol 7',
+ 'Blippo Blk BT',
+ 'Consolas',
+ 'Calisto MT',
+ 'MS Gothic',
+ 'HYdnkB',
+ 'Footlight MT Light',
+ 'HYsnrL',
+ 'Haan YHead B',
+ 'Arial',
+ 'Papyrus',
+ 'Perpetua',
+ 'Simplified Arabic Fixed',
+ 'Book Antiqua',
+ 'MoeumT R',
+ 'Headline R',
+ 'Arial',
+ 'HYmjrE',
+ 'Browallia New',
+ 'HYporM',
+ 'Century Gothic',
+ 'Yj CHMSOOT Bold',
+ 'Segoe Script',
+ 'Book Antiqua',
+ 'Colonna MT',
+ 'Calisto MT',
+ 'FreesiaUPC',
+ 'Cordia New',
+ 'Yet R',
+ 'Century Schoolbook',
+ 'NanumGothic',
+ 'KodchiangUPC',
+ 'EucrosiaUPC',
+ 'Tunga',
+ 'Corbel',
+ 'Gadugi',
+ 'Cambria',
+ 'Cordia New',
+ 'Cooper Blk BT',
+ 'CentSchbook BT',
+ 'Tw Cen MT Condensed',
+ 'Segoe UI Symbol',
+ 'Segoe UI',
+ 'Browallia New',
+ 'Aparajita',
+ 'LilyUPC',
+ 'HyhwpEQ',
+ '??????',
+ 'Lucida Sans Typewriter',
+ 'Franklin Gothic Book',
+ 'Lucida Fax',
+ 'GoudyOlSt BT',
+ 'MJemokBatang',
+ 'Arial',
+ 'Tempus Sans ITC',
+ 'Calisto MT',
+ 'KaiTi',
+ '??????',
+ 'Lucida Sans Typewriter',
+ 'NanumSquareOTF',
+ 'Shruti',
+ 'DilleniaUPC',
+ 'KBIZgo R',
+ 'SimSun',
+ 'HCR Batang ExtB',
+ 'Viner Hand ITC',
+ 'HYPost-Medium',
+ '??????',
+ 'Bodoni MT',
+ 'FangSong',
+ 'FuturaBlack BT',
+ 'Narkisim',
+ 'Yj MAEHWA  SemiBold',
+ 'Helvetica',
+ 'Times New Roman',
+ 'Eras Light ITC',
+ 'Haansoft Dotum',
+ 'Vladimir Script',
+ 'Yj TEUNTEUN Bold',
+ 'MS Reference Sans Serif',
+ '??????',
+ 'AngsanaUPC',
+ 'Helvetica Fractions',
+ 'Leelawadee',
+ 'JasmineUPC',
+ 'Courier New',
+ 'NanumBarunpen',
+ 'EucrosiaUPC',
+ 'Niagara Solid',
+ 'Rockwell',
+ 'Century',
+ 'Edwardian Script ITC',
+ 'Gill Sans MT',
+ 'Shonar Bangla',
+ 'Gill Sans MT Condensed',
+ 'LilyUPC',
+ 'Kokila',
+ 'Gloucester MT Extra Condensed',
+ 'Haan Cooljazz B',
+ 'MT Extra',
+ 'HYsanB',
+ 'KBIZgo B',
+ 'Corbel',
+ 'ahn2006-L',
+ 'High Tower Text',
+ 'Hancom Gothic',
+ 'Traditional Arabic',
+ 'HCR Batang',
+ 'Bodoni Bd BT',
+ 'Trebuchet MS',
+ 'AmeriGarmnd BT',
+ 'Microsoft YaHei',
+ 'Liberty BT',
+ 'Gadugi',
+ 'Gautami',
+ 'Britannic Bold',
+ 'Yj NANCHO Medium',
+ 'Bodoni MT',
+ 'Latha',
+ 'Raavi',
+ 'Yj GOTGAE Medium',
+ 'Calisto MT',
+ 'Helvetica',
+ 'HYgprM',
+ 'Franklin Gothic Demi',
+ 'Yj BUTGOT Light ',
+ 'Sakkal Majalla',
+ 'Perpetua Titling MT',
+ 'BrushScript BT',
+ 'Lucida Console',
+ 'Helvetica Compressed',
+ 'Palatino Linotype',
+ 'CordiaUPC',
+ 'Marlett',
+ 'Wingdings 3']
+>>> 
+*** Remote Interpreter Reinitialized  ***
+Traceback (most recent call last):
+  File "<module1>", line 9, in <module>
+AttributeError: module 'matplotlib' has no attribute 'font_manager'
+>>> 
+*** Remote Interpreter Reinitialized  ***
+ name= DejaVu Serif
+ name= STIXSizeTwoSym
+ name= STIXSizeFiveSym
+ name= cmsy10
+ name= STIXNonUnicode
+ name= DejaVu Sans Mono
+ name= DejaVu Serif Display
+ name= STIXSizeFourSym
+ name= DejaVu Sans
+ name= DejaVu Sans
+ name= STIXSizeOneSym
+ name= STIXGeneral
+ name= STIXSizeThreeSym
+ name= cmtt10
+ name= STIXSizeThreeSym
+ name= STIXNonUnicode
+ name= STIXSizeFourSym
+ name= cmss10
+ name= DejaVu Serif
+ name= cmb10
+ name= cmex10
+ name= cmr10
+ name= STIXSizeOneSym
+ name= DejaVu Sans Mono
+ name= cmmi10
+ name= STIXGeneral
+ name= DejaVu Sans Display
+ name= DejaVu Sans
+ name= STIXNonUnicode
+ name= DejaVu Sans Mono
+ name= DejaVu Serif
+ name= STIXGeneral
+ name= DejaVu Sans
+ name= STIXGeneral
+ name= STIXNonUnicode
+ name= STIXSizeTwoSym
+ name= DejaVu Sans Mono
+ name= DejaVu Serif
+ name= JasmineUPC
+ name= MSugiJeong
+ name= Stencil BT
+ name= Bell MT
+ name= Haan YGodic 240
+ name= Trebuchet MS
+ name= NanumBarunGothic
+ name= Haan Sollip B
+ name= Haan YGodic 250
+ name= Haan YGodic 230
+ name= Lucida Handwriting
+ name= Wide Latin
+ name= MingLiU-ExtB
+ name= Kalinga
+ name= Stencil
+ name= LilyUPC
+ name= HYhaeseo
+ name= Broadway
+ name= Haan Baekje B
+ name= MDGaesung
+ name= HYdnkM
+ name= Aparajita
+ name= AmeriGarmnd BT
+ name= Vijaya
+ name= Haan Somang M
+ name= IrisUPC
+ name= Book Antiqua
+ name= OCR A Extended
+ name= Pristina
+ name= Utsaah
+ name= CentSchbook BT
+ name= Levenim MT
+ name= HYMyeongJo-Extra
+ name= Microsoft Uighur
+ name= Playbill
+ name= Calibri
+ name= David
+ name= Constantia
+ name= Goudy Old Style
+ name= NanumBarunGothic
+ name= Century Gothic
+ name= ? ??
+ name= Corbel
+ name= Rockwell
+ name= Calibri
+ name= Verdana
+ name= Lucida Bright
+ name= MS Reference Specialty
+ name= DomCasual BT
+ name= Kokila
+ name= Lucida Fax
+ name= Microsoft JhengHei
+ name= HYGungSo-Bold
+ name= HCR Dotum Ext
+ name= Lucida Bright
+ name= HYnamL
+ name= Bodoni Bk BT
+ name= Bradley Hand ITC
+ name= Felix Titling
+ name= Century Schoolbook
+ name= Aparajita
+ name= Orbit-B BT
+ name= Gill Sans Ultra Bold
+ name= Gill Sans MT
+ name= HYsupM
+ name= ??????
+ name= HYGothic-Medium
+ name= Goudy Old Style
+ name= CentSchbook BT
+ name= AmeriGarmnd BT
+ name= Kalinga
+ name= Pyunji R
+ name= HYbsrB
+ name= Engravers MT
+ name= Arial
+ name= Gisha
+ name= CommercialScript BT
+ name= Palatino Linotype
+ name= NanumGothic
+ name= Calibri
+ name= BrowalliaUPC
+ name= Bell MT
+ name= Haan YHead M
+ name= NanumSquare
+ name= Gulim
+ name= SimSun-ExtB
+ name= Copperplate Gothic Light
+ name= Rockwell Extra Bold
+ name= KBIZmjo M
+ name= Rage Italic
+ name= Browallia New
+ name= Berlin Sans FB
+ name= HCR Dotum
+ name= Blackadder ITC
+ name= Wingdings
+ name= Rockwell Condensed
+ name= CordiaUPC
+ name= Calibri
+ name= HYcysM
+ name= Kokila
+ name= Franklin Gothic Medium
+ name= Courier New
+ name= Agency FB
+ name= Bodoni MT
+ name= Bookman Old Style
+ name= Segoe Print
+ name= Courier New
+ name= Bookman Old Style
+ name= GoudyOlSt BT
+ name= Lucida Sans
+ name= Freehand591 BT
+ name= Times New Roman
+ name= Bodoni MT
+ name= ahn2006-M
+ name= Brush Script MT
+ name= Harrington
+ name= Angsana New
+ name= KodchiangUPC
+ name= Franklin Gothic Heavy
+ name= Courier10 BT
+ name= HYbdaM
+ name= Haan Baekje M
+ name= Eras Demi ITC
+ name= Yj BACDOO Bold 
+ name= Arial Rounded MT Bold
+ name= Kartika
+ name= Microsoft PhagsPa
+ name= DilleniaUPC
+ name= Lucida Calligraphy
+ name= MS Outlook
+ name= GoudyOlSt BT
+ name= Courier New
+ name= Segoe Print
+ name= Simplified Arabic
+ name= High Tower Text
+ name= MDAlong
+ name= HYgtrE
+ name= JasmineUPC
+ name= Gill Sans MT
+ name= Traditional Arabic
+ name= Webdings
+ name= Wingdings 2
+ name= Tw Cen MT
+ name= Tahoma
+ name= Yj INITIALPOSITIVE Medium
+ name= Newtext Bk BT
+ name= Times New Roman
+ name= Yj SHANALL Medium 
+ name= Iskoola Pota
+ name= Castellar
+ name= HCR Batang ExtB
+ name= Bodoni MT
+ name= NanumMyeongjo
+ name= NanumMyeongjo
+ name= Perpetua
+ name= Consolas
+ name= HYHeadLine-Medium
+ name= Script MT Bold
+ name= Lucida Sans Typewriter
+ name= Trebuchet MS
+ name= Arial
+ name= Constantia
+ name= ??????
+ name= Microsoft Tai Le
+ name= Garamond
+ name= Tw Cen MT
+ name= Candara
+ name= FreesiaUPC
+ name= Eras Medium ITC
+ name= Vivaldi
+ name= Segoe Script
+ name= Bodoni MT
+ name= Utsaah
+ name= Shruti
+ name= Kokila
+ name= Ebrima
+ name= Hancom Gothic
+ name= HYtbrB
+ name= Arial
+ name= Imprint MT Shadow
+ name= Lucida Sans
+ name= Tw Cen MT
+ name= Arial Unicode MS
+ name= Aparajita
+ name= Microsoft New Tai Lue
+ name= MoolBoran
+ name= HYShortSamul-Medium
+ name= Raavi
+ name= Eras Bold ITC
+ name= Constantia
+ name= GoudyOlSt BT
+ name= Microsoft JhengHei
+ name= EucrosiaUPC
+ name= EucrosiaUPC
+ name= HCR Batang
+ name= HYgsrB
+ name= Verdana
+ name= Han Santteut Dotum
+ name= Ravie
+ name= Nirmala UI
+ name= DaunPenh
+ name= Arial
+ name= Lao UI
+ name= FreesiaUPC
+ name= CordiaUPC
+ name= MDEasop
+ name= Helvetica Black
+ name= Monotype Corsiva
+ name= Segoe UI
+ name= YJ INJANG Medium
+ name= Californian FB
+ name= Yj SOSEL SemiBold
+ name= Comic Sans MS
+ name= Cambria
+ name= Bodoni MT
+ name= Chiller
+ name= BroadwayEngraved BT
+ name= Jokerman
+ name= Meiryo
+ name= Californian FB
+ name= Bodoni Bk BT
+ name= Bodoni MT
+ name= HYkanB
+ name= Californian FB
+ name= Khmer UI
+ name= Modern No. 20
+ name= Helvetica .Black
+ name= Verdana
+ name= KBIZgo M
+ name= Goudy Stout
+ name= Yj WADAG Medium
+ name= Kristen ITC
+ name= Haan Sollip M
+ name= Aharoni
+ name= KBIZmjo R
+ name= NanumBarunpen
+ name= Perpetua
+ name= Batang
+ name= HYkanM
+ name= Showcard Gothic
+ name= HancomEQN
+ name= IrisUPC
+ name= Angsana New
+ name= Berlin Sans FB Demi
+ name= Microsoft Uighur
+ name= Consolas
+ name= Yj DOOLGI Medium
+ name= Lucida Bright
+ name= NanumSquare
+ name= Haan Somang B
+ name= Ebrima
+ name= Gabriola
+ name= MurrayHill Bd BT
+ name= MGungHeulim
+ name= Kartika
+ name= Agency FB
+ name= Franklin Gothic Medium Cond
+ name= Segoe UI
+ name= Onyx
+ name= Cooper Blk BT
+ name= Rockwell
+ name= Utsaah
+ name= NanumBarunGothic
+ name= HYnamB
+ name= HYPost-Light
+ name= Informal Roman
+ name= IrisUPC
+ name= MBatang
+ name= Bodoni MT
+ name= Tahoma
+ name= Cambria
+ name= KodchiangUPC
+ name= Meiryo
+ name= Yj BONMOKGAK Medium 
+ name= NanumGothic
+ name= Nirmala UI
+ name= OCR-B-10 BT
+ name= Franklin Gothic Demi
+ name= ????
+ name= Maiandra GD
+ name= Segoe UI
+ name= Calibri
+ name= Magic R
+ name= Microsoft YaHei
+ name= MingLiU
+ name= NanumGothic
+ name= BrowalliaUPC
+ name= Bodoni Bd BT
+ name= Nyala
+ name= ??????
+ name= AmeriGarmnd BT
+ name= Malgun Gothic
+ name= Franklin Gothic Medium
+ name= Elephant
+ name= ???
+ name= DokChampa
+ name= Iskoola Pota
+ name= Microsoft PhagsPa
+ name= AngsanaUPC
+ name= Courier10 BT
+ name= Georgia
+ name= Yj DWMMOOGJO
+ name= Orator10 BT
+ name= Microsoft JhengHei
+ name= Lucida Fax
+ name= NanumSquare
+ name= Franklin Gothic Heavy
+ name= ????
+ name= ParkAvenue BT
+ name= AngsanaUPC
+ name= NanumMyeongjo
+ name= Matura MT Script Capitals
+ name= Consolas
+ name= Tw Cen MT Condensed Extra Bold
+ name= Miriam
+ name= DilleniaUPC
+ name= Gill Sans Ultra Bold Condensed
+ name= Century Gothic
+ name= Rod
+ name= BernhardFashion BT
+ name= Vrinda
+ name= HYsupB
+ name= Algerian
+ name= Segoe UI
+ name= SimHei
+ name= Microsoft YaHei
+ name= Copperplate Gothic Bold
+ name= Microsoft New Tai Lue
+ name= Centaur
+ name= Miriam Fixed
+ name= Magneto
+ name= MDArt
+ name= Segoe UI
+ name= FrankRuehl
+ name= ????
+ name= MV Boli
+ name= NanumSquareOTF
+ name= Century Schoolbook
+ name= MGungJeong
+ name= Cooper Black
+ name= Vijaya
+ name= BrowalliaUPC
+ name= Symbol
+ name= Poor Richard
+ name= MHunmin
+ name= Bodoni MT
+ name= Gill Sans MT
+ name= Century Schoolbook
+ name= Sakkal Majalla
+ name= Haan YHead L
+ name= MS Mincho
+ name= Franklin Gothic Demi Cond
+ name= Nanum Brush Script
+ name= HYmprL
+ name= Lucida Sans
+ name= Utsaah
+ name= MDotum
+ name= Cordia New
+ name= FreesiaUPC
+ name= Haansoft Batang
+ name= JasmineUPC
+ name= Simplified Arabic
+ name= Verdana
+ name= Bernard MT Condensed
+ name= Estrangelo Edessa
+ name= FZSong_Superfont
+ name= Impact
+ name= KBIZmjo B
+ name= Leelawadee
+ name= HYwulM
+ name= Browallia New
+ name= Yj GABI
+ name= Haan Wing2
+ name= Mistral
+ name= Plantagenet Cherokee
+ name= Bookman Old Style
+ name= HYbdaL
+ name= Gill Sans MT Ext Condensed Bold
+ name= Perpetua Titling MT
+ name= Times New Roman
+ name= Mangal
+ name= Book Antiqua
+ name= Franklin Gothic Book
+ name= ??????
+ name= Lao UI
+ name= Bell MT
+ name= Vrinda
+ name= French Script MT
+ name= Bodoni MT
+ name= Garamond
+ name= NewJumja
+ name= Angsana New
+ name= Malgun Gothic
+ name= Segoe UI
+ name= Georgia
+ name= Harlow Solid Italic
+ name= Yj BLOCK Medium
+ name= Swis721 BT
+ name= Sylfaen
+ name= HYGothic-Extra
+ name= Microsoft Yi Baiti
+ name= Freestyle Script
+ name= Ami R
+ name= Haan Sale M
+ name= Han Santteut Dotum
+ name= Swis721 BT
+ name= Kunstler Script
+ name= Lucida Sans Unicode
+ name= Goudy Old Style
+ name= Microsoft Tai Le
+ name= Corbel
+ name= Palatino Linotype
+ name= HCR Dotum
+ name= Baskerville Old Face
+ name= MSugiHeulim
+ name= Gigi
+ name= MJemokGothic
+ name= Niagara Engraved
+ name= OCR-A BT
+ name= Arial
+ name= Cambria
+ name= Mongolian Baiti
+ name= Georgia
+ name= Constantia
+ name= Levenim MT
+ name= Hobo BT
+ name= Garamond
+ name= Rockwell Condensed
+ name= HYGraphic-Medium
+ name= HCR Batang Ext
+ name= Comic Sans MS
+ name= Microsoft YaHei
+ name= Palatino Linotype
+ name= MDSol
+ name= CentSchbook BT
+ name= ahn2006-B
+ name= HYnamM
+ name= Segoe UI Emoji
+ name= Rockwell
+ name= Haan Sale B
+ name= Curlz MT
+ name= HYwulB
+ name= Calibri
+ name= AngsanaUPC
+ name= Forte
+ name= BrowalliaUPC
+ name= Haan Cooljazz M
+ name= Euphemia
+ name= Lucida Bright
+ name= Century Gothic
+ name= Haan Cooljazz L
+ name= Khmer UI
+ name= Candara
+ name= Georgia
+ name= Gisha
+ name= NanumBarunGothic
+ name= Snap ITC
+ name= Haettenschweiler
+ name= Angsana New
+ name= NanumSquareOTF
+ name= CordiaUPC
+ name= Candara
+ name= Lucida Sans
+ name= Microsoft Himalaya
+ name= Latha
+ name= YJ BELLA Medium
+ name= Andalus
+ name= Microsoft Sans Serif
+ name= HYPMokGak-Bold
+ name= Baskerville BT
+ name= NanumMyeongjo
+ name= Lucida Sans Typewriter
+ name= Mangal
+ name= DFKai-SB
+ name= Arabic Typesetting
+ name= Parchment
+ name= Juice ITC
+ name= IrisUPC
+ name= Bauhaus 93
+ name= DilleniaUPC
+ name= Arial
+ name= NanumSquareOTF
+ name= Microsoft JhengHei
+ name= Shonar Bangla
+ name= ??????
+ name= Palace Script MT
+ name= Old English Text MT
+ name= Lucida Fax
+ name= Elephant
+ name= Gautami
+ name= New Gulim
+ name= Vani
+ name= Bookman Old Style
+ name= HYSinMyeongJo-Medium
+ name= Cordia New
+ name= David
+ name= Trebuchet MS
+ name= Candara
+ name= Berlin Sans FB
+ name= Vani
+ name= Tunga
+ name= LilyUPC
+ name= Perpetua
+ name= Tw Cen MT Condensed
+ name= KodchiangUPC
+ name= Tw Cen MT
+ name= NanumSquare
+ name= Bookshelf Symbol 7
+ name= Blippo Blk BT
+ name= Consolas
+ name= Calisto MT
+ name= MS Gothic
+ name= HYdnkB
+ name= Footlight MT Light
+ name= HYsnrL
+ name= Haan YHead B
+ name= Arial
+ name= Papyrus
+ name= Perpetua
+ name= Simplified Arabic Fixed
+ name= Book Antiqua
+ name= MoeumT R
+ name= Headline R
+ name= Arial
+ name= HYmjrE
+ name= Browallia New
+ name= HYporM
+ name= Century Gothic
+ name= Yj CHMSOOT Bold
+ name= Segoe Script
+ name= Book Antiqua
+ name= Colonna MT
+ name= Calisto MT
+ name= FreesiaUPC
+ name= Cordia New
+ name= Yet R
+ name= Century Schoolbook
+ name= NanumGothic
+ name= KodchiangUPC
+ name= EucrosiaUPC
+ name= Tunga
+ name= Corbel
+ name= Gadugi
+ name= Cambria
+ name= Cordia New
+ name= Cooper Blk BT
+ name= CentSchbook BT
+ name= Tw Cen MT Condensed
+ name= Segoe UI Symbol
+ name= Segoe UI
+ name= Browallia New
+ name= Aparajita
+ name= LilyUPC
+ name= HyhwpEQ
+ name= ??????
+ name= Lucida Sans Typewriter
+ name= Franklin Gothic Book
+ name= Lucida Fax
+ name= GoudyOlSt BT
+ name= MJemokBatang
+ name= Arial
+ name= Tempus Sans ITC
+ name= Calisto MT
+ name= KaiTi
+ name= ??????
+ name= Lucida Sans Typewriter
+ name= NanumSquareOTF
+ name= Shruti
+ name= DilleniaUPC
+ name= KBIZgo R
+ name= SimSun
+ name= HCR Batang ExtB
+ name= Viner Hand ITC
+ name= HYPost-Medium
+ name= ??????
+ name= Bodoni MT
+ name= FangSong
+ name= FuturaBlack BT
+ name= Narkisim
+ name= Yj MAEHWA  SemiBold
+ name= Helvetica
+ name= Times New Roman
+ name= Eras Light ITC
+ name= Haansoft Dotum
+ name= Vladimir Script
+ name= Yj TEUNTEUN Bold
+ name= MS Reference Sans Serif
+ name= ??????
+ name= AngsanaUPC
+ name= Helvetica Fractions
+ name= Leelawadee
+ name= JasmineUPC
+ name= Courier New
+ name= NanumBarunpen
+ name= EucrosiaUPC
+ name= Niagara Solid
+ name= Rockwell
+ name= Century
+ name= Edwardian Script ITC
+ name= Gill Sans MT
+ name= Shonar Bangla
+ name= Gill Sans MT Condensed
+ name= LilyUPC
+ name= Kokila
+ name= Gloucester MT Extra Condensed
+ name= Haan Cooljazz B
+ name= MT Extra
+ name= HYsanB
+ name= KBIZgo B
+ name= Corbel
+ name= ahn2006-L
+ name= High Tower Text
+ name= Hancom Gothic
+ name= Traditional Arabic
+ name= HCR Batang
+ name= Bodoni Bd BT
+ name= Trebuchet MS
+ name= AmeriGarmnd BT
+ name= Microsoft YaHei
+ name= Liberty BT
+ name= Gadugi
+ name= Gautami
+ name= Britannic Bold
+ name= Yj NANCHO Medium
+ name= Bodoni MT
+ name= Latha
+ name= Raavi
+ name= Yj GOTGAE Medium
+ name= Calisto MT
+ name= Helvetica
+ name= HYgprM
+ name= Franklin Gothic Demi
+ name= Yj BUTGOT Light 
+ name= Sakkal Majalla
+ name= Perpetua Titling MT
+ name= BrushScript BT
+ name= Lucida Console
+ name= Helvetica Compressed
+ name= Palatino Linotype
+ name= CordiaUPC
+ name= Marlett
+ name= Wingdings 3
