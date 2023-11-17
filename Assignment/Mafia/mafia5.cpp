@@ -142,18 +142,18 @@ int getLevel(Node n) {
     int level = 0;
     auto node = n;
     while (node.bossNode != NULL) {
-        cout << node.name << " " << node.bossNode->name << endl;
+        // cout << node.name << " " << node.bossNode->name << endl;
         node = *node.bossNode;
-        if (node.bossNode != nullptr) {
-            cout << node.name << " " << node.bossNode->name << endl;
+        // if (node.bossNode != nullptr) {
+        //     cout << node.name << " " << node.bossNode->name << endl;
 
-        } else {
-            cout << node.name << " " << "null" << endl;
-        }
+        // } else {
+        //     cout << node.name << " " << "null" << endl;
+        // }
         level++;
     }
     // n.level = level;
-    cout << "------------\n";
+    // cout << "------------\n";
     return level;
 }
 
@@ -177,18 +177,26 @@ void printMafia() {
 }
 
 
+bool mysort(Node* a, Node* b) {
+    // return a->totalServantCounts > b->totalServantCounts;
+    if (a->totalServantCounts == b->totalServantCounts) {
+        // return a->level < b->level;
+        if (a->level == b->level) {
+            return a->name < b->name;
+        } else {
+            return a->level < b->level;
+        }
+    } else {
+        return a->totalServantCounts > b->totalServantCounts;
+    }
+}
+
 
 int main() {
     input();
     // allout(people);
-    printMafia();
+    // printMafia();
 
-    cout << "32431242314123\n";
-    for (auto& person : people) {
-        if (person.name != "" && person.bossNode == nullptr) {
-            cout << person.name << endl;
-        }
-    }
     for (auto& person : people) {
         // cout << person.name << " : ";
         if (person.name != "") {
@@ -204,16 +212,27 @@ int main() {
         }
         
     }
-    for (auto& person : people) {
-        if (person.name != "") {
-            cout << person.name << " : " << person.totalServantCounts << ", " << person.level << endl;
-        }
-    }
+    // for (auto& person : people) {
+    //     if (person.name != "") {
+    //         // cout << person.name << " : " << person.totalServantCounts << ", " << person.level << endl;
+    //         ranking.push_back(&person);
+    //     }
+    // }
 
+    // for (auto& person : ranking) {
+    //     cout << person->name << " : " << person->totalServantCounts << ", " << person->level << endl;
+    // }
+
+    sort(ranking.begin(), ranking.end(), mysort);
     // for (auto i : ranking) {
     //     cout << i.name << " "; 
     // }
     // cout <<endl;
+
+    for (auto& person : ranking) {
+        cout << person->name << " ";
+    }
+    cout << endl;
 
     return 0;
 }
