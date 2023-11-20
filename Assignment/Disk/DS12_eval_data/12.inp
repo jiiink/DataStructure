@@ -1,0 +1,21 @@
+25000
+write Kakao 4880
+write Naver 16550
+write Samsung 5770
+show Kakao
+delete Kakao
+write Posco 23950
+write KakaoBank 1635
+show KakaoBank
+delete KakaoBank
+delete Naver
+write HYUNDAI 20250
+show HYUNDAI
+delete Samsung
+show Posco
+compact
+show HYUNDAI
+delete Posco
+compact
+show HYUNDAI
+end

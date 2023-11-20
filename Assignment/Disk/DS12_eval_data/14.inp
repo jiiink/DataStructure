@@ -1,0 +1,34 @@
+71024
+write Griffin 25470
+write Edgell 26357
+show Edgell
+write Crump 1677
+delete Edgell
+write Greenleaf 26000
+show Greenleaf
+write Pollock 1339
+write Amesbury 1314
+show Amesbury
+delete Crump
+write Matthews 6353
+write Edmond 8817
+show Edmond
+show Matthews
+write Nickolls 4540
+delete Greenleaf
+write Giblin 12900
+write Voyse 2800
+show Voyse
+show Giblin
+write Jeffrey 8120
+delete Jeffrey
+write Neville 116
+write Karras 5770
+write Hoare 5565
+show Hoare
+compact
+show Neville
+delete Karras
+write Ogilvie 5778
+show Ogilvie
+end

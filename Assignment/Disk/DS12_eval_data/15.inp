@@ -1,0 +1,30 @@
+17720
+write Mcarthur 598
+show Mcarthur
+delete Mcarthur
+compact
+write Marsden 6170
+show Marsden
+write Jolley 9096
+write Timberlake 200
+write Crown 1012
+show Crown
+write Gaskell 7442
+write Wildman 231
+delete Marsden
+delete Timberlake
+show Wildman
+delete Newham
+write Nott 1406
+write Stott 149
+compact
+show Crown
+delete Nott
+show Stott
+write Voakes 1500
+show Voakes
+write Jeffers 200
+delete Jeffers
+write Driver 4500
+show Driver
+end
