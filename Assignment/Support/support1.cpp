@@ -14,7 +14,7 @@ public:
     }
 };
 priority_queue<Guest, vector<Guest>, mycomparison> Room;
-
+vector<Guest> outRoom;
 
 
 void input() {
@@ -37,8 +37,29 @@ void printPQ() {
     }
 }
 
+
+void council(Guest& g) {
+    if (g.cT > 10) {
+        g.cT -= g.cT/2;
+        g.aT += g.cT;
+        Room.push(g);
+    } else {
+        outRoom.push_back(g);
+    }
+}
+
+
+void process() {
+    // auto room_cp = Room;
+    while (!Room.empty()) {
+        council(Room.top());
+    }
+}
+
 int main() {
     input();
     printPQ();
+
+    process();
     return 0;
 }
