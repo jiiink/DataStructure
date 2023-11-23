@@ -8,10 +8,11 @@ struct Guest {
 };
 
 class mycomparison {
-public:
-    bool operator() (const Guest& lhs, const Guest& rhs) {
-        return lhs.cT < rhs.cT;
-    }
+    public:
+        mycomparison() {}
+        bool operator() (const Guest& lhs, const Guest& rhs) {
+            return lhs.cT < rhs.cT;
+        }
 };
 priority_queue<Guest, vector<Guest>, mycomparison> Room;
 vector<Guest> outRoom;
@@ -52,14 +53,21 @@ void council(Guest& g) {
 void process() {
     // auto room_cp = Room;
     while (!Room.empty()) {
-        council(Room.top());
+        Guest currentGuest = Room.top();
+        Room.pop();
+        council(currentGuest);
     }
 }
 
 int main() {
     input();
-    printPQ();
+    // printPQ();
 
     process();
+
+    for (auto g : outRoom) {
+        cout << g.id << " ";
+    }
+
     return 0;
 }
