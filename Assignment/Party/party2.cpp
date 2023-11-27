@@ -4,6 +4,8 @@ using namespace std;
 
 /*
     will make it with char
+
+    maybe map or dict ?
 */
 
 // stores adjacency list items
