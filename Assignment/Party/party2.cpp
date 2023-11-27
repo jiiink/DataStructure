@@ -10,7 +10,8 @@ using namespace std;
 
 // stores adjacency list items
 struct adjNode {
-    int val, cost;
+    char val;
+    int cost;
     adjNode* next;
 };
 // structure to store edges
@@ -20,7 +21,7 @@ struct graphEdge {
 
 class DiaGraph {
     // insert new nodes into adjacency list from given graph
-    adjNode* getAdjListNode(int value, int weight, adjNode* head) {
+    adjNode* getAdjListNode(char value, int weight, adjNode* head) {
         adjNode* newNode = new adjNode;
         newNode->val = value;
         newNode-> cost = weight;
@@ -30,22 +31,25 @@ class DiaGraph {
     }
     int N; // number of nodes in the graph
 public:
-    adjNode **head; // adjacency list as array of pointers
+    // adjNode **head; // adjacency list as array of pointers
+    map<char, adjNode*> head;
     // Constructor
     DiaGraph() {}
     // DiaGraph(graphEdge edges[], int n, int N) {
-    DiaGraph(vector<pair<int, int>> edges, int n, int N) {    
+    DiaGraph(vector<pair<char, char>> edges, int n, int N) {    
         // allocate new node
-        head = new adjNode*[N]();
+        // head = new adjNode*[N]();
         this->N = N;
         // initialize head pointer for all vertices
-        for (int i=0; i<N; ++i)
-            head[i] = nullptr;
+        // for (int i=0; i<N; ++i)
+        //     head[i] = nullptr;
         // construct directed graph by adding edges to it
         for (unsigned i=0; i<n; i++) {
-            int start_ver = edges[i].first;
-            int end_ver = edges[i].second;
+            // int start_ver = edges[i].first;
+            // int end_ver = edges[i].second;
             int weight = 1;
+            char start_ver = edges[i].first;
+            char end_ver = edges[i].second;
             // insert in the beginning
             adjNode* newNode = getAdjListNode(end_ver, weight, head[start_ver]);
 
@@ -64,9 +68,9 @@ public:
 
 
 // print all adjacent vertices of given vertex
-void display_AdjList(adjNode* ptr, int i) {
+void display_AdjList(adjNode* ptr, char c) {
     while (ptr != nullptr) {
-        cout << "(" << i << ", " << ptr->val
+        cout << "(" << c << ", " << ptr->val
             << ", " << ptr->cost << ") ";
         ptr = ptr->next;
     }
@@ -105,11 +109,11 @@ void input() {
     cout << endl;
 }
 
-vector< pair<int, int> > edges;
+vector< pair<char, char> > edges;
 void makeEdge() {
     for (auto& c : graph) {
         for (int i=1; i<c.size(); i++) {
-            pair<int, int> edge(c[0] - 97, c[i] - 97);
+            pair<char, char> edge(c[0], c[i]);
             edges.push_back(edge);
         }
     }
@@ -129,9 +133,13 @@ int main() {
     DiaGraph diagraph(edges, n, N);
     // print adjacency list representation of graph
     cout << "Graph adjacency list " << endl << "(start_vertex, end_vertex, weight):" << endl;
-    for (int i=0; i<N; i++) {
-        // display adjacent vertices of vertex i
-        display_AdjList(diagraph.head[i], i);
+    // for (int i=0; i<N; i++) {
+    //     // display adjacent vertices of vertex i
+    //     display_AdjList(diagraph.head[i], i);
+    // }
+    for (auto& a : diagraph.head) {
+        // cout << a.first << " ";
+        display_AdjList(a.second, a.first);
     }
 
     return 0;

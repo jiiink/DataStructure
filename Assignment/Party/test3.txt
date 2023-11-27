@@ -1,0 +1,14 @@
+12
+a m k
+a h c e $
+h a c d $
+d h c j k $
+c a h d g $
+g c e f j $
+j g d k $
+e a g f m $
+f e m i g $
+i f b k $
+k i b d $
+m e f b $
+b m i k $

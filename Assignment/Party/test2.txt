@@ -1,6 +1,6 @@
 4
-a b c
+a c d
+c a b $
 a b c $
 b a c d $
-c a b $
 d b $
