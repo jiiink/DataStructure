@@ -1,0 +1,6 @@
+4
+a b c
+a b c $
+b a c d $
+c a b $
+d b $
