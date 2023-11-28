@@ -1,5 +1,5 @@
 7
-q t r
+p q r
 p q t $
 q t p $
 w t $

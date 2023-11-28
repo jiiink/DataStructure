@@ -1,5 +1,5 @@
 4
-a c d
+a b c
 c a b $
 a b c $
 b a c d $
