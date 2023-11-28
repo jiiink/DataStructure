@@ -79,7 +79,7 @@ vector<int> dijkstra(const DiaGraph& graph, char start) {
         for (const adjNode* neighbor = graph.head.at(u); neighbor != nullptr; neighbor = neighbor->next) {
             char v = neighbor->val;
 
-            if (currentDist%2 == 1) currentDist++;
+            if (currentDist%2 == 1) currentDist++; // when pass the intersection
             int newDist = currentDist + neighbor->cost;
 
             if (newDist < dist[v]) {
