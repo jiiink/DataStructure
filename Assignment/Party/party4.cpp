@@ -108,7 +108,7 @@ vector<int> dijkstra(const DiaGraph& graph, char start) {
         for (const adjNode* neighbor = graph.head.at(u); neighbor != nullptr; neighbor = neighbor->next) {
             char v = neighbor->val;
 
-            if (currentDist%2 == 1) currentDist++;
+            if (currentDist%3 == 1) currentDist+=2;
             int newDist = currentDist + neighbor->cost;
 
             if (newDist < dist[v]) {
@@ -192,15 +192,15 @@ void getFriends(const DiaGraph& graph) {
         it++;
     }
 
-    // // display
-    // for (const auto f : friends) {
-    //     auto it = graph.head.begin();
-    //     cout << "Distances from node " << f.first << " to all other nodes:\n";
-    //     for (const auto i : f.second) {
-    //         cout << "To node " << (*it++).first << ": " << i << endl;
-    //     }
-    //     cout << endl;
-    // }
+    // display
+    for (const auto f : friends) {
+        auto it = graph.head.begin();
+        cout << "Distances from node " << f.first << " to all other nodes:\n";
+        for (const auto i : f.second) {
+            cout << "To node " << (*it++).first << ": " << i << endl;
+        }
+        cout << endl;
+    }
 
 
 

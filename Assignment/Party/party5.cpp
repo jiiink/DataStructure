@@ -79,7 +79,7 @@ vector<int> dijkstra(const DiaGraph& graph, char start) {
         for (const adjNode* neighbor = graph.head.at(u); neighbor != nullptr; neighbor = neighbor->next) {
             char v = neighbor->val;
 
-            if (currentDist%2 == 1) currentDist++;
+            if (currentDist%2 == 1) currentDist+=2;
             int newDist = currentDist + neighbor->cost;
 
             if (newDist < dist[v]) {
@@ -134,7 +134,7 @@ void findMinNode(const DiaGraph graph) {
         max_of_tuple[(*it++).first] = *max_element(tuple.begin(), tuple.end());
     }
 
-    pair_i_c min_value = *min_element(max_of_tuple.begin(), max_of_tuple.end(), mycomp);
+    pair<char, int> min_value = *min_element(max_of_tuple.begin(), max_of_tuple.end(), mycomp);
 
     if (min_value.second == INF) {
         cout << "@\n" << -1 << endl;
