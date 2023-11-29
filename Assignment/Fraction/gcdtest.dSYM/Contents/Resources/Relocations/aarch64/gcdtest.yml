@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     gcdtest
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003E0C, symSize: 0x30 }
+  - { offsetInCU: 0x87, offset: 0x87, size: 0x8, addend: 0x0, symName: __ZNSt3__13gcdB7v160006IiiEENS_11common_typeIJT_T0_EE4typeES2_S3_, symObjAddr: 0x30, symBinAddr: 0x100003E3C, symSize: 0x48 }
+  - { offsetInCU: 0xEBF, offset: 0xEBF, size: 0x8, addend: 0x0, symName: __ZNSt3__15__gcdIjEET_S1_S1_, symObjAddr: 0x78, symBinAddr: 0x100003E84, symSize: 0x68 }
+  - { offsetInCU: 0x3695, offset: 0x3695, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003E0C, symSize: 0x30 }
+  - { offsetInCU: 0x36B8, offset: 0x36B8, size: 0x8, addend: 0x0, symName: __ZNKSt3__18__ct_absIiiLb1EEclB7v160006Ei, symObjAddr: 0xE0, symBinAddr: 0x100003EEC, symSize: 0x8C }
+  - { offsetInCU: 0x36EA, offset: 0x36EA, size: 0x8, addend: 0x0, symName: __ZNSt3__114numeric_limitsIiE3minB7v160006Ev, symObjAddr: 0x16C, symBinAddr: 0x100003F78, symSize: 0x14 }
+  - { offsetInCU: 0x36FD, offset: 0x36FD, size: 0x8, addend: 0x0, symName: __ZNSt3__123__libcpp_numeric_limitsIiLb1EE3minB7v160006Ev, symObjAddr: 0x180, symBinAddr: 0x100003F8C, symSize: 0x8 }
+...
