@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define pair_c_c pair<char, char>
+#define pair_c_i pair<char, int>
+#define pair_i_c pair<int, char>
 
 struct Node {
     char val;
-    int cost = 1;
     Node* next;
 };
 
@@ -16,26 +18,16 @@ class Graph {
     }
 public:
     map<char, Node*> head;
-    Graph(vector<pair<char, char>> edges) {
-        for (const auto& edge : edges) {
+    Graph(vector<pair_c_c> edges) {
+        for (auto& edge : edges) {
             char start_ver = edge.first;
             Node* newNode = getAdjListNode(edge.second, head[start_ver]);
             head[start_ver] = newNode;
         }
     }
-    ~Graph() {
-        for (auto& entry : head) {
-            Node* current = entry.second;
-            while (current != nullptr) {
-                Node* next = current->next;
-                delete current;
-                current = next;
-            }
-        }
-    }
 };
 
-vector<pair<char, char>> edges;
+vector<pair_c_c> edges;
 char f1, f2, f3;
 int N;
 void input() {
@@ -53,7 +45,6 @@ vector<int> dijkstra(Graph& g, char start) {
     map<char, int> dist;
     for (auto& entry : g.head)
         dist[entry.first] = INT_MAX;
-    #define pair_i_c pair<int, char>
     priority_queue<pair_i_c, vector<pair_i_c>, greater<pair_i_c>> pq;
     pq.push({0, start});
     dist[start] = 0;
@@ -65,17 +56,21 @@ vector<int> dijkstra(Graph& g, char start) {
 
         if (currentDist > dist[u])
             continue;
+        if (g.head.find(u) != g.head.end()) {
+            for (Node* n = g.head.at(u); n != nullptr; n = n->next) {
+                char v = n->val;
 
-        for (Node* n = g.head.at(u); n != nullptr; n = n->next) {
-            char v = n->val;
+                if (currentDist%3 == 1) currentDist+=2;
+                int newDist = currentDist + 1;
 
-            if (currentDist%3 == 1) currentDist+=2; // when pass the intersection
-            int newDist = currentDist + n->cost;
-
-            if (newDist < dist[v]) {
-                dist[v] = newDist;
-                pq.push({newDist, v});
+                if (newDist < dist[v]) {
+                    dist[v] = newDist;
+                    pq.push({newDist, v});
+                }
             }
+        } else {
+            cout << "@" << endl << -1 << endl;
+            exit(0);
         }
     }
 
@@ -92,10 +87,6 @@ void getDist(Graph& g) {
         fs[entry] = dijkstra(g, entry);
 }
 
-// bool mycomp(const pair<char, int> &lhs, const pair<char, int> &rhs) {
-//     return lhs.second < rhs.second;
-// }
-
 void findMinNode(Graph g) {
     map<char, int> max_of_tuple;
     auto it = g.head.begin();
@@ -105,8 +96,7 @@ void findMinNode(Graph g) {
             t.push_back(f.second[col]);
         max_of_tuple[(*it++).first] = *max_element(t.begin(), t.end());
     }
-    // pair<char, int> min = *min_element(max_of_tuple.begin(), max_of_tuple.end(), mycomp);
-    pair<char, int> min = *min_element(max_of_tuple.begin(), max_of_tuple.end(), [](const pair<char, int> &lhs, const pair<char, int> &rhs) {
+    pair_c_i min = *min_element(max_of_tuple.begin(), max_of_tuple.end(), [](const pair_c_i &lhs, const pair_c_i &rhs) {
         return lhs.second < rhs.second;
     });
     if (min.second == INT_MAX)
