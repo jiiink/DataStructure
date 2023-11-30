@@ -1,26 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct adjNode {
+struct Node {
     char val;
     int cost = 1;
-    adjNode* next;
+    Node* next;
 };
 
-class DiaGraph {
-    adjNode* getAdjListNode(char value, adjNode* head) {
-        adjNode* newNode = new adjNode;
+class Graph {
+    Node* getAdjListNode(char value, Node* head) {
+        Node* newNode = new Node;
         newNode->val = value;
         newNode->next = head;
         return newNode;
     }
 public:
-    map<char, adjNode*> head;
-    DiaGraph(vector<pair<char, char>> edges) {
+    map<char, Node*> head;
+    Graph(vector<pair<char, char>> edges) {
         for (const auto& edge : edges) {
             char start_ver = edge.first;
-            adjNode* newNode = getAdjListNode(edge.second, head[start_ver]);
+            Node* newNode = getAdjListNode(edge.second, head[start_ver]);
             head[start_ver] = newNode;
+        }
+    }
+    ~Graph() {
+        for (auto& entry : head) {
+            Node* current = entry.second;
+            while (current != nullptr) {
+                Node* next = current->next;
+                delete current;
+                current = next;
+            }
         }
     }
 };
@@ -32,17 +42,16 @@ void input() {
     cin >> N;
     cin >> f1 >> f2 >> f3;
     for (int i = 0; i < N; i++) {
-        char currentChar;
-        char start;
+        char c, start;
         cin >> start;
-        while (cin >> currentChar && currentChar != '$')
-            edges.emplace_back(start, currentChar);
+        while (cin >> c && c != '$')
+            edges.emplace_back(start, c);
     }
 }
 
-vector<int> dijkstra(DiaGraph& g, char start) {
+vector<int> dijkstra(Graph& g, char start) {
     map<char, int> dist;
-    for (const auto& entry : g.head)
+    for (auto& entry : g.head)
         dist[entry.first] = INT_MAX;
     #define pair_i_c pair<int, char>
     priority_queue<pair_i_c, vector<pair_i_c>, greater<pair_i_c>> pq;
@@ -57,11 +66,11 @@ vector<int> dijkstra(DiaGraph& g, char start) {
         if (currentDist > dist[u])
             continue;
 
-        for (const adjNode* neighbor = g.head.at(u); neighbor != nullptr; neighbor = neighbor->next) {
-            char v = neighbor->val;
+        for (Node* n = g.head.at(u); n != nullptr; n = n->next) {
+            char v = n->val;
 
             if (currentDist%3 == 1) currentDist+=2; // when pass the intersection
-            int newDist = currentDist + neighbor->cost;
+            int newDist = currentDist + n->cost;
 
             if (newDist < dist[v]) {
                 dist[v] = newDist;
@@ -71,13 +80,13 @@ vector<int> dijkstra(DiaGraph& g, char start) {
     }
 
     vector<int> distances;
-    for (const auto& entry : dist)
+    for (auto& entry : dist)
         distances.push_back(entry.second);
     return distances;
 }
 
 map<char, vector<int>> fs;
-void calculateDistances(DiaGraph& g) {
+void getDist(Graph& g) {
     array<char, 3> friends = {f1, f2, f3};
     for (const auto& entry : friends)
         fs[entry] = dijkstra(g, entry);
@@ -87,26 +96,29 @@ bool mycomp(const pair<char, int> &lhs, const pair<char, int> &rhs) {
     return lhs.second < rhs.second;
 }
 
-void findMinNode(DiaGraph g) {
+void findMinNode(Graph g) {
     map<char, int> max_of_tuple;
     auto it = g.head.begin();
     for (int col=0; col<N; col++) {
-        vector<int> tuple;
+        vector<int> t;
         for (auto& f : fs) 
-            tuple.push_back(f.second[col]);
-        max_of_tuple[(*it++).first] = *max_element(tuple.begin(), tuple.end());
+            t.push_back(f.second[col]);
+        max_of_tuple[(*it++).first] = *max_element(t.begin(), t.end());
     }
-    pair<char, int> min_value = *min_element(max_of_tuple.begin(), max_of_tuple.end(), mycomp);
-    if (min_value.second == INT_MAX)
-        min_value = {'@', -1};
-    cout << min_value.first << endl << min_value.second << endl;
+    // pair<char, int> min = *min_element(max_of_tuple.begin(), max_of_tuple.end(), mycomp);
+    pair<char, int> min = *min_element(max_of_tuple.begin(), max_of_tuple.end(), [] (const pair<char, int> &lhs, const pair<char, int> &rhs) -> {
+        return lhs.second < rhs.second;
+    });
+    if (min.second == INT_MAX)
+        min = {'@', -1};
+    cout << min.first << endl << min.second << endl;
 }
 
 int main() {
     input();
-    DiaGraph diagraph(edges);
-    calculateDistances(diagraph);
-    findMinNode(diagraph);
+    Graph g(edges);
+    getDist(g);
+    findMinNode(g);
 
     return 0;
 }
