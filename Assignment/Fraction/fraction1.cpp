@@ -34,10 +34,11 @@ bool validParenthesis() {
 }
 
 void simpleTest() {
-    int a = simple[0];
-    int b = simple[1];
-    int c = simple[2];
-    cout << a*c + b << " " << c << endl;
+    // int a = simple[0];
+    // int b = simple[1];
+    // int c = simple[2];
+    // cout << a*c + b << " " << c << endl;
+    
 }
 
 int main() {
@@ -48,7 +49,7 @@ int main() {
         cout << -1 << endl;
     }
 
-    cout << 1 + 2/3;
+    // cout << 1 + 2/3;
 
     return 0;
 }
