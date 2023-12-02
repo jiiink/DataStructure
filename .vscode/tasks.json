@@ -6,6 +6,7 @@
 			"label": "C/C++: cpp.exe build active file",
 			"command": "C:\\mingw64\\bin\\cpp.exe",
 			"args": [
+				"-std=gnu++14",
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
@@ -19,7 +20,7 @@
 				"$gcc"
 			],
 			"group": {
-				"kind": "test",
+				"kind": "build",
 				"isDefault": true
 			},
 			"detail": "compiler: C:\\mingw64\\bin\\cpp.exe"
