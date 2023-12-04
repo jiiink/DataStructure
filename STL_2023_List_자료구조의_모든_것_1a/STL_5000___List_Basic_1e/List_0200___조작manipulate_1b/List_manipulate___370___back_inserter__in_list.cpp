@@ -13,13 +13,13 @@ int main() {
     outlist("1. lb<>= ", lb) ;
     outlist("1. lc<>= ", lc) ;
 
-    copy( la.begin(), la.end(), back_inserter(lb)) ;
-    //copy( la.begin(), la.end(), lb.begin() ) ;
+    // copy( la.begin(), la.end(), back_inserter(lb)) ;
+    copy( la.begin(), la.end(), lb.begin() ) ;
 
 
-    outlist("2. copy  ÀÌÈÄ la<>= ", la) ;
-    outlist("2. copy  ÀÌÈÄ lb<>= ", lb) ;
-    outlist("2. copy  ÀÌÈÄ lc<>= ", lc) ;
+    outlist("2. copy  ï¿½ï¿½ï¿½ï¿½ la<>= ", la) ;
+    outlist("2. copy  ï¿½ï¿½ï¿½ï¿½ lb<>= ", lb) ;
+    outlist("2. copy  ï¿½ï¿½ï¿½ï¿½ lc<>= ", lc) ;
 
     for(auto w : la ) lc.push_back(w+1) ;
     outlist("3. lc<>= ", lc) ;
