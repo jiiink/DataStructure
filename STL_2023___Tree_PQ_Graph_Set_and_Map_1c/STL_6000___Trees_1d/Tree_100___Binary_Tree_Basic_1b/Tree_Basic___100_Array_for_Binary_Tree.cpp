@@ -21,19 +21,9 @@ int main() {
     cout << "\n Type a node number:" ;
     cin >> num ;
     cout << "\n Two Children of node " << num << " are \n { " ;
-    cout << atree[2*num] << " and " << atree[2*num+1]  << " } \n\n" ;
+    cout << atree[2*num+1] << " and " << atree[2*num+2]  << " } \n\n" ;
 
     num = tree_depth( atree) ;
     cout << "\n atreeÀÇ Depth =" << num ;
 
 } // END OF MAIN( )
-
-
-
-
-
-
-
-
-
-
