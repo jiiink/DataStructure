@@ -133,6 +133,6 @@ int main() {
 	if (s == t) cout << "s == t ÀÔ´Ï´Ù. " ;
 	else cout << "s != t ÀÎµª¼î. °°Áö ¾Ê´Ù´Â ¸»¾¸. " ;
 	cout << endl;
-	getchar() ;
+	// getchar() ;
 
 } // end of main( )

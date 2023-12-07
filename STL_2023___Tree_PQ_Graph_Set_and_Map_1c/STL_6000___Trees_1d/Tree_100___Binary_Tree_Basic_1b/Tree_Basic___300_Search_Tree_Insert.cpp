@@ -40,12 +40,12 @@ void Insert(vector <struct bst> &v1, int aData) {
     int currentIdx = 0;
     while ( currentIdx < v1.size() ) {
         if(aData <= v1[currentIdx].data) {  // 원하는 자리를 찾아들어감.
-            if( v1[currentIdx].leftIdx == -1)   {
+            if( v1[currentIdx].leftIdx == -1)   { 
                 setleft(v1, currentIdx, aData);
                 break;                 }
             else currentIdx = v1[currentIdx].leftIdx;
             }
-        else {
+        else { // 값이 크면 오른쪽으로
             if(v1[currentIdx].rightIdx == -1) {
                 setright(v1, currentIdx, aData);
                 break;
