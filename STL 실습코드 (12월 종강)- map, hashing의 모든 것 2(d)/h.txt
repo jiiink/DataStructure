@@ -1,0 +1,12 @@
+h.txt
+Hash 0100 - Map Basic 2(a)
+Hash 0180 - Applying Map techs 1(b)
+Hash 0200 - Map Operation 1(d)
+Hash 0250 - Multimap New 2020 1(a)
+Hash 0300 - Hi-Dimen Map 2(a)
+Hash 0400 - Unordered Map 1(b)
+Hash 0500 - Map for Custom Class 1(b)
+Hash 0600 - hash_map 1(b)
+Hash 0700 - hash( x ) = k 1(c)
+Hash 0800 - Unordered Set 1(b)
+Hash 0900 - Python for Hashing (b)
