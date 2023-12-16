@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <unordered_map>   // 속도가 map<>보다 더 빠름. 진짜 map
+// #include "../../../../../../../mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h"
 using namespace std ;
 
 unordered_map<int, int> m(20);

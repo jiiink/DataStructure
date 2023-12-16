@@ -24,6 +24,8 @@ int main () {
     s = " ummer" ; hv = myhash(s) ; cout << "\n hv = " << hv ;
     s = "Summer" ; hv = myhash(s) ; cout << "\n hv = " << hv ;
     s = "SSummer" ; hv = myhash(s) ; cout << "\n hv = " << hv ;
+    s = "son" ; hv = myhash(s) ; cout << "\n hv = " << hv ;
+    s = "son1" ; hv = myhash(s) ; cout << "\n hv = " << hv ;
 
   return 0;
 }

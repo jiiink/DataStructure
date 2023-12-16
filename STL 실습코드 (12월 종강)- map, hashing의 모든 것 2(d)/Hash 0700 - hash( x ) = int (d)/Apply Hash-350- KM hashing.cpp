@@ -19,7 +19,7 @@ long long KM_hash(string const& s) {
 
 
 int main() {
-
+    // compare strings
     vector <string> genome { "a", "g", "agg", "gttcga", "agg", "aggc", "gttca", \
                              "ttagatagatatatagaagccc", "ttagatagatatatagaagccc",
                              "ttagatagatatatagaatccc"} ;

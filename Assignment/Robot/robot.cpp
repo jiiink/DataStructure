@@ -4,12 +4,6 @@ using namespace std;
 
 using tiiii = tuple<int, int, int, int>;
 
-#define endl '\n'
-#define em emplace
-#define emb emplace_back
-#define all(x) x.begin(), x.end()
-#define fastio iostream::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
-
 pair<int, int> directions[4] = {{1,  0},
                                 {0,  1},
                                 {-1, 0},
@@ -22,19 +16,14 @@ int INF = 20'000'000;
 int N, T;
 
 void input() {
-    //fstream cin("023.inp");
-
     cin >> N >> T;
 
     graph.resize(N);
 
     for (int i = N - 1; i >= 0; --i) {
         graph[i].resize(N);
-
         for (auto &point: graph[i]) cin >> point;
     }
-
-    //cin.close();
 }
 
 void solve() {
@@ -44,14 +33,13 @@ void solve() {
 
     for (auto &row: costs) {
         row.resize(N);
-
         for (auto &point: row) point = INF;
     }
 
     costs[0][0] = 0;
 
-    pq.em(0, 0, 0, 0);
-    pq.em(0, 1, 0, 0);
+    pq.emplace(0, 0, 0, 0);
+    pq.emplace(0, 1, 0, 0);
 
     int nowcost, nowdir, nowx, nowy;
 
@@ -82,19 +70,10 @@ void solve() {
 }
 
 void output() {
-    /*
-    for (const auto &row: costs) {
-        for (const auto &point: row) cout << (point == INF ? -1 : point) << '\T';
-        cout << endl;
-    }
-    */
-
     cout << (costs[N - 1][N - 1] == INF ? -1 : costs[N - 1][N - 1]);
 }
 
 int main() {
-    fastio
-
     input();
     solve();
     output();
