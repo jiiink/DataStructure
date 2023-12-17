@@ -7,15 +7,23 @@ struct Guest {
     Guest(int at, int id, int ct) : arrivedTime(at), id(id), councilTime(ct) {}
 };
 
-class mycomparison {
-    public:
-        mycomparison() {}
-        bool operator() (const Guest& lhs, const Guest& rhs) {
-            if (lhs.councilTime == rhs.councilTime) 
-                return lhs.arrivedTime > rhs.arrivedTime;
-            else 
-                return lhs.councilTime < rhs.councilTime;
-        }
+// class mycomparison {
+//     public:
+//         mycomparison() {}
+//         bool operator() (const Guest& lhs, const Guest& rhs) {
+//             if (lhs.councilTime == rhs.councilTime) 
+//                 return lhs.arrivedTime > rhs.arrivedTime;
+//             else 
+//                 return lhs.councilTime < rhs.councilTime;
+//         }
+// };
+struct mycomparison {
+    bool operator() (const Guest& lhs, const Guest& rhs) {
+        if (lhs.councilTime == rhs.councilTime) 
+            return lhs.arrivedTime > rhs.arrivedTime;
+        else
+            return lhs.councilTime < rhs.councilTime;
+    }
 };
 priority_queue<Guest, vector<Guest>, mycomparison> Room;
 queue<Guest> fromInput;
