@@ -32,7 +32,7 @@ int main() {
 
 
     string sd = "abcdefg12345";
-    list<char> tlist(sa.begin(), sa.end());
+    list<char> tlist(sa.begin(), sa.end()); // "Pizza"
     list<char> ld(sd.begin(), sd.end());
     it1 = ld.begin();
     it2 = tlist.begin();
