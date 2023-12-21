@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define allout(x) for (auto i : x) cout << i << " ";
 using DNA_FORM = set<int, greater<>>;
 
 multimap< DNA_FORM, int> GDBC;
+// vector  <DNA_FORM>        Query;
 
+// bool myfunc(int i, int j) {return i>j;}
 vector<vector<int>> responses;
 void query(DNA_FORM request) {
     vector<int> response;
@@ -23,29 +24,47 @@ void input() {
     
     while (getline(cin, line)) {
         if (line == "$") break;
+
         istringstream iss(line);
         DNA_FORM DNA;
         char mode;
-        int value;
         iss >> mode;
         if (mode == 'R') {
-            while (iss >> value && value > 0) DNA.insert(value);
+            int value;
+
+            while (iss >> value) {
+                if (value < 0) break;
+                DNA.insert(value);
+            }
             GDBC.insert(pair<DNA_FORM, int>(DNA, value));
         }
         if (mode == 'Q') {
-            while (iss >> value && value != 0) DNA.insert(value);
+            int value;
+
+            while (iss >> value) {
+                if (value == 0) break;
+                DNA.insert(value);
+            }
             query(DNA);
+        }
+    }
+}
+
+void output() {
+    for (auto& r : responses) {
+        if (r.empty()) {
+            cout << "\nNone\n";
+        } else {
+            for (auto& c : r) {
+                cout << c << " ";
+            }
+            cout << endl;
         }
     }
 }
 
 int main() {
     input();
-
-    for_each(responses.begin(), responses.end(), [] (vector<int> response) {
-        if (response.empty()) cout << "\nNone";
-        else allout(response);
-        cout << endl;
-    });
+    output();
     return 0;
 }
