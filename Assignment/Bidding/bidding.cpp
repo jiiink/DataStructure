@@ -5,68 +5,43 @@
 #include <algorithm>
 using namespace std;
 
-bool isNotDigit(char c) {
-    return !isdigit(c);
-}
+map<int, vector<string>, greater<int> > bids; 
+string winner = "NONE";
 
-int main() {
-    vector<string> lines;
-    string line;
-    string firstLine;
-    int numOfPeople;
+void input() {
+    int N;
+    cin >> N;
 
-    //bid as a key, vector of name as a value, ordered with decendent of bid
-    //so we can know the number of people who make that bid.
-    map<int, vector<string>, greater<int> > bids; 
-
-    getline(cin, firstLine);
-    numOfPeople = stoi(firstLine);
-
-    for (int i=0; i<numOfPeople; i++) {
-        getline(cin, line);
-        lines.push_back(line);
-    }
-
-    for (const string& line : lines) {
-        istringstream splitedLine(line);
+    while(N--) {
         string name;
-        string numStr;
         int bid;
 
-        splitedLine >> name;
-        if (name.length() > 15) { //error with the length of name
-            cout << "The length of name is over 15" << endl;
-            return 0;
-        }
-
-        splitedLine >> numStr;
-        
-        numStr.erase(remove_if(numStr.begin(), numStr.end(), isNotDigit), numStr.end());
-        
-        if (!numStr.empty()) {
-            bid = stoi(numStr);
-        } else {
-            bid = 0;
-        }
-
-        if (bid < 1 || bid > 10000) { //error with range of bid
-            cout << "The bid has to 1 <= bid <= 10,000" << endl;
-            return 0;
-        }
-
+        cin >> name >> bid;
         bids[bid].push_back(name);
     }
+}
 
-    string winner = "NONE";
+void process() {
 
-    for (const pair<int, vector<string> >& bid : bids) {
+    for (auto& bid : bids) {
         if (bid.second.size() == 1) { //unique bid
             winner = bid.second[0];
             break;
         }
     }
+}
 
+void output() {
     cout << winner << endl;
+}
+
+int main() {
+
+    input();
+
+    process();
+
+    output();
 
     return 0;
 }
